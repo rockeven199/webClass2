@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+    开始界面设置
+    <hr>
+    <label for="Birds">birds</label>
+    <input type="radio" name="startAnimate" id="Birds"><br>
+    <label for="Net">net</label>
+    <input type="radio" name="startAnimate" id="Net"><br>
+    <label for="Waves">waves</label>
+    <input type="radio" name="startAnimate" id="Waves"><br>
+    <label for="Halo">halo</label>
+    <input type="radio" name="startAnimate" id="Halo"><br>
+    <div id="showArea"></div>
+    <input type="button" value="更改" id="confirm">
+</body>
+<script>
+    window.onload = function () {
+        var animateCache = localStorage.getItem("StartAnimate")
+        var animateArr = new Array("Birds", "Net", "Waves", "Halo");
+
+        // 初始化选项
+        if (animateArr.indexOf(animateCache) != -1) {
+            const animateVersion = {
+                birds: animateCache.indexOf("Birds") > -1,
+                net: animateCache.indexOf("Net") > -1,
+                waves: animateCache.indexOf("Waves") > -1,
+                halo: animateCache.indexOf("Halo") > -1
+            };
+            if (animateVersion.birds) {
+                $("#Birds").attr("checked", "true");
+            };
+            if (animateVersion.net) {
+                $("#Net").attr("checked", "true");
+            };
+            if (animateVersion.waves) {
+                $("#Waves").attr("checked", "true");
+            }
+            if (animateVersion.halo) {
+                $("#Halo").attr("checked", "true");
+            }
+        }
+
+        // 设置选项
+        $(this.$("input[name='startAnimate']")).on("click", function () {
+            var animateGraphics = $(this).attr("id");
+            if (animateArr.indexOf(animateGraphics) != -1) {
+                const animateVersion = {
+                    birds: animateGraphics.indexOf("Birds") > -1,
+                    net: animateGraphics.indexOf("Net") > -1,
+                    waves: animateGraphics.indexOf("Waves") > -1,
+                    halo: animateGraphics.indexOf("Halo") > -1
+                };
+                if (animateVersion.birds) {
+                    var bufferStartGraphicsAnimate = "Birds"
+                };
+                if (animateVersion.net) {
+                    var bufferStartGraphicsAnimate = "Net"
+                };
+                if (animateVersion.waves) {
+                    var bufferStartGraphicsAnimate = "Waves"
+                }
+                if (animateVersion.halo) {
+                    var bufferStartGraphicsAnimate = "Halo"
+                }
+            }
+            // 更改选项
+            $("#confirm").on("click", function (a) {
+                localStorage.setItem("StartGraphics", bufferStartGraphicsAnimate);
+                window.history.go(-1)
+            })
+        })
+    }
+</script>
+
+</html>

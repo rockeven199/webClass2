@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="lead">2.3.12 HTML的框架元素</span>
+                <p>前面讲述了网页布局，大部分网页可以看作DIV+CSS布局方式，但是，有一小部分网
+
+                    页不是这么做的，它们可能是table布局方式，也可能是框架集布局方式。table布局方式通
+
+                    篇用&lt;table&gt;元素完成，通常见于报告单等，使用较少。</p>
+                <p>框架集布局用到了HTML框架集元素，框架集布局和普通布局最大的不同就是，框架
+
+                    集布局可以在同一个浏览器窗口显示一个以上的页面。框架集布局在写法上，首先是DTD不同，需要用到框架集模式，HTML4.01中DTD写成 &lt;!DOCTYPE HTML
+                    PUBLIC"-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">;
+                    XHTML 1.0中，DTD 写成&lt;!DOCTYPE html PUBLIC"-//W3C/DTD XHTML 1.0 Frameset//EN"
+                    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;.其标签主要有以下几个</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>·&lt;frameset&gt;:定义一个框架集，用于组织多个窗口（框架），每个框架存有独立的HTML文档。&lt;fameset&gt;元素通常用cols或者rows
+                            属性规定在框架集中存在多少列或者少行的框架。需要注意的是，不能与&lt;frameset&gt;元素标签共同使用&lt;body&gt;元素，除
+                            有&lt;noframe&gt;元素，此时需要将&lt;body&gt;元素放在&lt;noframe&gt;元素之中。</p>
+                        <p>·&lt;frame&gt;:用于定义&lt;frameset&gt;中一个特定的窗口（框架）。需要注意的是，
+
+                            这个元
+
+                            是空元素，没有结束标签，建议写为&lt;frame/&gt;.
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>用src属性定义需要显示的HTML文档。</p>
+                                    <p>用frameborder属性定义框架的外边框，属性值为0或者l.</p>
+                                    <p>用scrolling属性定义是否显示滚动条，有yes、no和auto3个属性值。</p>
+                                    <p>用noresize="noresize"定义该框架无法调整大小，非默认值，默认是可调整大小的。</p>
+                                    <p>用marginheight和marginwidth属性定义上下左右的边距。</p>
+                                </div>
+                            </div>
+                        </p>
+                        <p>·&lt;noframe&gt;:用于为那些不支持框架集的浏览器显示文本。&lt;noframes&gt;元素位
+
+                            &lt;frameset&gt;元素内部。</p>
+                        <p>·&lt;iframe&gt;:该元素的效果与&lt;frame&gt;元素相同，但与&lt;frame&gt;元素有两点不同之处
+
+                            一是用在&lt;body&gt;元素中，创建一个行内框架；二是它是有开始标签和结束标签的，
+
+                            可以将普通文本放入并作为元素的内容，应对遇到不支持&lt;iframe&gt;元素的浏览器
+
+                            显示提示告知用户。&lt;iframe&gt;支持全局标准属性和全局事件属性。另外，它的属
+
+                            src、frameborder、scrolling、marginheight、marginwidth 与&lt;frame&gt;元素相同，但
+
+                            加了以下几个属性。
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>height:用于定义框架的高度。</p>
+                                    <p>width:用于定义框架的宽度。</p>
+                                </div>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button1' data-clipboard-target='.copyTarget1' name='copy'>Copy</button>
+            <code class='copyTarget1'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;框架集&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;frameset cols="25%,50%,25%"&gt;
+        &lt;frame src="http://www.taobao.com" scrolling="no" noresize="noresize"/&gt;
+        &lt;frame src="https://www.baidu.com" /&gt;
+        &lt;frame src="http://www.sina.com" /&gt;
+        &lt;noframes&gt;
+            &lt;body&gt;您的浏览器无法处理框架！请更换浏览器打开&lt;/body&gt;
+        &lt;/noframes&gt;
+    &lt;/frameset&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+                <p>运行结果如下：</p>
+                <img src="./img/2.3.12-1.jpg" alt="" class="mb-3">
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button2' data-clipboard-target='.copyTarget2' name='copy'>Copy</button>
+            <code class='copyTarget2'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;框架集&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;frameset rows="25%,50%,25%"&gt;
+        &lt;frame src="http://www.taobao.com"/&gt;
+        &lt;frame src="https://www.baidu.com" /&gt;
+        &lt;frame src="http://www.sina.com" /&gt;
+        &lt;noframes&gt;
+            &lt;body&gt;您的浏览器无法处理框架！请更换浏览器打开&lt;/body&gt;
+        &lt;/noframes&gt;
+    &lt;/frameset&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+                <p>运行结果如下：</p>
+                <img src="./img/2.3.12-2.jpg" alt="" class="mb-3">
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button3' data-clipboard-target='.copyTarget3' name='copy'>Copy</button>
+            <code class='copyTarget3'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;框架集&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;frameset rows="50%,50%"&gt;
+        &lt;frame src="http://www.taobao.com"/&gt;
+        &lt;frameset cols="50%,50%"&gt;
+            &lt;frame src="https://www.baidu.com" /&gt;
+            &lt;frame src="http://www.sina.com" /&gt;
+        &lt;/frameset&gt;
+        &lt;noframes&gt;
+            &lt;body&gt;您的浏览器无法处理框架！请更换浏览器打开&lt;/body&gt;
+        &lt;/noframes&gt;
+    &lt;/frameset&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+                <p>运行结果如下：</p>
+                <img src="./img/2.3.12-3.jpg" alt="" class="mb-3">
+                <p>框架集还可以做成一种导航框架，但需要先编写一个nav.html导航页面。</p>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button4' data-clipboard-target='.copyTarget4' name='copy'>Copy</button>
+            <code class='copyTarget4'>
+nav.html示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;导航&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href="http://www.baidu.com" target="showframe"&gt;百度&lt;/a&gt;&lt;br/&gt;
+        &lt;a href="http://www.taobao.com" target="showframe"&gt;淘宝&lt;/a&gt;&lt;br/&gt;
+        &lt;a href="http://www.sina.com" target="showframe"&gt;新浪&lt;/a&gt;&lt;br/&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+                <p class="ml-3">这里的target指向的是第二个框架的name属性，框架集代码如下：</p>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button5' data-clipboard-target='.copyTarget5' name='copy'>Copy</button>
+            <code class='copyTarget5'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;框架集&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;frameset cols="100,*"&gt;
+        &lt;frame src="nav.html"&gt;
+        &lt;frame src="http://www.baidu.com" name="showframe" /&gt;
+        &lt;noframes&gt;
+            &lt;body&gt;您的浏览器无法处理框架！请更换浏览器打开&lt;/body&gt;
+        &lt;/noframes&gt;
+    &lt;/frameset&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+                <p>这样就可以做到单击左侧而右侧随之切换的效果，运行结果如下图所示。</p>
+                <img src="./img/2.3.11-5.jpg" alt="" class="mb-3">
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button6' data-clipboard-target='.copyTarget6' name='copy'>Copy</button>
+            <code class='copyTarget6'>
+&lt;iframe&gt;的示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;框架集&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        百度：
+        &lt;iframe src="http://www.baidu.com" width="600" height="300"&gt; http://wwww.baidu.com&lt;/iframe&gt;&lt;br /&gt;
+        必应：
+        &lt;iframe src="http://www.bing.com" width="600" height="300"&gt; http://wwww.bing.com&lt;/iframe&gt;&lt;br /&gt;
+        淘宝：
+        &lt;iframe src="http://www.taobao.com" width="600" height="300"&gt; http://wwww.taobao.com&lt;/iframe&gt;&lt;br /&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+            </code>
+            </pre>
+                <p>运行结果如下图所示。</p>
+                <img src="./img/2.3.11-6.jpg" alt="" class="mb-3">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+/* 侧边大纲栏 */
+h4 {
+  width: 100%;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+aside ul li {
+  padding: 10px;
+  list-style: none;
+}
+
+#main li:hover {
+  color: white;
+  background-color: rgba(45, 201, 20, 0.966) !important;
+}
+
+#content-text {
+  color: white;
+}
+
+aside li a {
+  padding: 5px;
+}
+
+aside li {
+  border-bottom: 1px solid rgba(91, 91, 91, 0.537);
+  background-color: rgb(255, 255, 255);
+}
+aside {
+  position: absolute;
+  z-index: 99;
+  padding: 0 0.1%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid transparent;
+  overflow: auto;
+  float: left;
+  width: 23%;
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  transition: all 1s;
+}
+
+/* 左侧大纲栏设置 */
+#main-title {
+  margin-bottom: 2%;
+  border: 1px solid transparent;
+}
+
+#main-title h4 {
+  font-size: 20px;
+}
+
+#content {
+  text-indent: 5%;
+}
+
+#content-text {
+  font-weight: 100;
+  text-indent: 5%;
+}
+
+.ListHeader {
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+}
+
+#ChildContent {
+  width: 100%;
+  display: none;
+  text-indent: 10%;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+#menu-button {
+  border-left: 6px solid rgb(26, 179, 26);
+}
+
+#section-title {
+  font-weight: 100;
+}

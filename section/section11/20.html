@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p><span class="lead">2.3.4 HTML的段落元素</span></p>
+                <p>&lt;p&gt;标签用于定义段落，浏览器会自动在其前后创建一些空白。段落的行数需要依物
+                    览器窗口的大小。如果调节浏览器窗口的大小，将改变段落中的行数，而且如果段落
+                    的内容中连续出现了很多空格，或者连续出现了一个以上的换行，浏览器都将解读为，
+                    空格。该标签支持全局标准属性和全局事件属性。</p>
+                <p>&lt;br&gt;标签定义一个换行，通常在&lt;p&gt;标签内。若要正常地换行，就用到了&lt;br&gt;标签，
+                    需要注意的是，&lt;br&gt;标签不是用于分割段落的。</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <pre class="language-xml text-left">
+        <button type="button" class="btn btn-outline-primary" id="copy-button1" data-clipboard-target=".copyTarget1" name="copy">Copy</button>
+        <code class="copyTarget1">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/rhtm14/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+&lt;title&gt;段落&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;兄弟，你真是经天纬地之才，气吞山河之志，上知天文下知地理，通晓古今，学
+    西，超凡脱俗之人！文能提笔安天下，武能上马定乾坤，美貌与智慧并重，英雄和狭义的化身，王
+    风胜潘安，一朵梨花压海棠，人见人爱，车见车载
+&lt;/p&gt;
+&lt;p&gt;
+    燕雀  安知  鸿鹄之 志  哉
+&lt;d/&gt;
+&lt;p&gt;以上内容纯属编造，&lt;br /&gt;若有雷同，纯属巧合&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </code>
+        </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-3 mb-3">运行结果如下图所示。</div>
+            <div class="col-md-12">
+                <p><img src="./img/2.3.4.jpg" alt=""></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

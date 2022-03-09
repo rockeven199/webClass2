@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><span class="lead">2.3.2 HTML的无语义元素</span></p>
+                        <p>
+                            HTML中每个标签都有自己的语义。例如，&lt;body&gt;表示主体，&lt;head&gt;表示HTML文件
+                            信息头，&lt;h1&gt;表示一级标题。但也有两个无语义的标签，如&lt;span&gt;和&lt;div&gt;.&lt;span&gt;和&lt;div&gt;
+                            的不同之处在于：&lt;span&gt;是内联标签，用在一行文本中，前后衔接紧密；而&lt;div&gt;是块级
+                            签，它等同于其前后有换行。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <pre class="language-xml text-left">
+                <button type="button" class="btn btn-outline-primary" id="copy-button1" data-clipboard-target=".copyTarget1" name="copy">Copy</button>
+                <code class="copyTarget1">
+&lt;&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm14/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html";charset="utf-8"&gt;
+    &lt;title&gt;无语义标签&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+    <code class="language-css">
+        .dfn{
+            color: red;
+        }
+    </code>
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;
+    牛顿三大定律
+        &lt;div&gt;
+            &lt;span class="dfn"&gt;&lt;dfn&gt;牛顿第一运动定律&lt;/dfn&gt;&lt;/span&gt;:一切物体总保持匀速直线运动状态或静止状态，除非作用在它上面的力迫使它改变这种状态。
+        &lt;/div&gt;     
+        &lt;div&gt;      
+            &lt;span class="dfn"&gt;&lt;dfn&gt;牛顿第二运动定律&lt;/dfn&gt;&lt;/span&gt;:物体加速度的大小跟它受到的作用力成正比、跟它的质量成反比，加速度的方向跟作用力的方向相同。     
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;span class="dfn"&gt;&lt;dfn&gt;牛顿第三运动定律&lt;/dfn&gt;&lt;/span&gt;:两个物体之间的作用力和反作用力总是大小相等、方向相友，作用在同一条直线上。
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                    </pre>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-2">
+                        <p>
+                            运行结果如下图所示。
+                        </p>
+                        <img src="./img/2.3.2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            HTML 常用&lt;div&gt;标签划分节或者区域，它可以用作严格的组织工具，并且不使用任何
+                            格式与其关联。
+                        </p>
+                        <p>
+                            现在有很多网页的布局方式可以叫作DIV+CSS.DIV用于存放需要显示的数据（文字、
+                            图表等），CSS用于指定如何显示数据样式，从而做到结构与样式的相互分离，便于后期维
+                            护与改版。这种布局代码简单，且易于维护。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <pre class="language-xml text-left">
+                <button type="button" class="btn btn-outline-primary" id="copy-button1" data-clipboard-target=".copyTarget2" name="copy">Copy</button>
+                <code class="copyTarget2">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm14/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
+    &lt;title&gt;DIV+CSS 布局&lt;/title&gt;
+    &lt;style&gt;
+<code class="language-css">
+    #header{
+        background-color: black;
+        color: white;
+        text-align:center;
+        padding:5px;
+    }
+    #nav{
+        background-color: #eeeeee;
+        height:300px;
+        width:100px;
+        float: left;
+        padding: 5px;
+    }
+    #section{         
+        width: 500px;         
+        float:1eft;         
+        padding:10px;    
+    }   
+    #footer{         
+        background-color: black;         
+        color:white;         
+        clear:both;         
+        text-align:center;         
+        padding:5px;   
+    }   
+</code>
+    &lt;/style>&gt;
+&lt;/head&gt;
+&lt;body&gt;  
+    &lt;div id="header"&gt;     
+        &lt;h1&gt;首页&lt;/h1&gt;  
+    &lt;/div&gt;
+    &lt;div id="nav"&gt;
+        HTML&lt;br&gt;css&lt;br&gt;JavaScript&lt;br&gt;
+    &lt;/div&gt;
+    &lt;div id="section"&gt;
+        &lt;h2&gt;HTML&lt;/h2&gt;
+        &lt;p&gt;HTML,超文本标记语言（HyperText Markup Language,简称HTML）,是为“网页创建和其他可在网页浏览器中看到的信息”设计的一种标记语言。&lt;p&gt; 
+        &lt;p&gt;人们可以使用HTML 来建立自己的Web站点，HTML文档运行在浏览器上，由浏览器来解析。&lt;/p&gt; 
+    &lt;/div&gt;     
+    &lt;div id="footer"&gt;
+        Author: 王五 E-mail: someone@example.com
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;       
+                        </code>
+                    </pre>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-2">
+                        <p>
+                            运行结果如下图所示。
+                        </p>
+                        <img src="./img/2.3.2-2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

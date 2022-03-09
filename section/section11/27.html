@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="lead">2.3.11 HTML的表单元素</span>
+                <p>在实际使用中，经常会遇到账号注册、账号登录、搜索、用户调查等，大部分网站在
+
+                    这些问题上使用HTML表单与用户进行交互。</p>
+                <p>表单元素允许用户在表单中输入内容，如文本框、文本域、单选框、复选框、下拉列表、按销等，当用户信息填写完毕后，进行提交操作，然后表单可以将用户在测监时输
+
+                    的数据传送到服务器端，这样服务器端程序就可以处理表单传过来的数据。</p>
+                <p>网页的表单是由&lt;form&gt;标签定义的，其他的表单控件元素必须放在&lt;form&gt;元素内部，
+
+                    否则，单击submit按钮提交时会丢失参数。</p>
+                <p>&lt;form&gt;标签最重要的属性为 action 利 method。action 属性定义了表单提交的地址，定
+
+                    常为一个URL地址：method属性定义了表单提交的方式，通常用post,
+
+                    有时会用
+
+                    get,具
+
+                    体用哪个由Web后端开发工程师决定，Web 前端开发只需要明确使用哪一个即可。表单挂
+
+                    件基本上都支持全局标准属性和全局事件属性。</p>
+                <p>在大部分情况下，表单控件元素用的是&lt;input&gt;元素，它是一个空元素，没有结束标签，
+
+                    在实际开发中建议将此标签写成&lt;input/&gt;。&lt;input&gt;元素可以通过type的属性值定义以下10
+
+                    种表单控件。</p>
+                <table class='table table-bordered table-striped table-hover'>
+                    <tr class='table-primary'>
+                        <th>type的属性值</th>
+                        <th>类型</th>
+                        <th>用途</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="text"&gt;</td>
+                        <td>单行文本框</td>
+                        <td>可以输入一行文本，可通过size和maxlength定义显示的宽度和最大字符数</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="password"&gt;</td>
+                        <td>密码输入框</td>
+                        <td>同单行文本框，可以输入一行文本，不同的是，该区域字符会被掩码</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="radio"&gt;</td>
+                        <td>单选按钮</td>
+                        <td>相同 name 属性的单选按钮只能选一个，默认选中用checked="checked"</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="checkbox"&gt;</td>
+                        <td>多选按钮</td>
+                        <td>可以多选的选择框，默认选中用checked="checked"</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="submit"&gt;</td>
+                        <td>提交按钮</td>
+                        <td>单击后会将表单数据发送到服务器</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="reset"&gt;</td>
+                        <td>重置按钮</td>
+                        <td>单击后会清除表单中的所有数据</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="button"&gt;</td>
+                        <td>按钮</td>
+                        <td>定义按钮，大部分情况下执行的是JavaScript脚本</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="image"&gt;</td>
+                        <td>图片形式提交按钮</td>
+                        <td>效果同提交按钮，用src属性赋予图片的URL,与提交按钮不同的是会在提交的参数中，相对于图片来说，在图片上单击坐标（x,y）</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="file"&gt;</td>
+                        <td>选择文件控件</td>
+                        <td>用于文件上传</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="hidden"&gt;</td>
+                        <td>隐藏的输入区域</td>
+                        <td>一般用于定义隐藏的参数</td>
+                    </tr>
+                </table>
+                <p>&lt;input&gt;元素最重要的两个属性：一个是name,另一个是value.这两个属性决定了表
+
+                    单提交时，对应的参数分别从这两个属性获取，形式为name=value。</p>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+                <button type='button' class='btn btn-outline-primary' id='copy-button1' data-clipboard-target='.copyTarget1' name='copy'>Copy</button>
+                <code class='copyTarget1'>
+示例代码：
+&lt;!DOCTYPE HIML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+            &lt;title&gt;表单&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;注册账号&lt;/h1&gt;
+            &lt;form action="regist" method="post"&gt;
+                用户名：&lt;input type="text" name="username" id="username" value="" /&gt;
+            &lt;input type="button" name="checkusername" id="checkusername" value="检查用户名是否被注册"/&gt;
+            &lt;br /&gt;
+                密码：&lt;input type="password" name="password" id="password" value=""/&gt;
+            &lt;br/&gt;
+                确认密码：&lt;input type="password" name="" id="re_password" value="" /&gt;
+            &lt;br/&gt;
+                性别：&lt;input type="radio" name="sex" id="sex_man" value="man" checked="checked" /&gt;男 
+                    &lt;input type="radio" name="sex" id="sex_woman" value="woman" /&gt;女
+            &lt;br/&gt;
+                兴趣爱好：&lt;input type="checkbox" name="interest" id="ins_football" value="football" /&gt;足球 
+                    &lt;input type="checkbox" name="interest" id="ins_volleyball" value="volleyball"/&gt;排球
+                    &lt;input type="checkbox" name="interest" id="ins_ping-pong" value="ping-pong" /&gt;乒乓球
+            &lt;br/&gt;
+                选择头像：&lt;input type="file" name="file" id="file" value="" /&gt;
+            &lt;br/&gt;
+                    &lt;input type="image" width="80" height="80" src="./img/submit.jpg"/&gt;
+            &lt;br/&gt;
+                    &lt;input type="reset" value="重置信息"/ &gt;
+                    &lt;input type="submit" id="submit" value="注册账号"/>
+                    &lt;input type="hidden" name="regist" id="" value="default" /&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+                </pre>
+                <p>运行结果如下图所示。</p>
+                <img src="./img/2.3.11-1.jpg" alt="">
+                <p>无论是单选按钮，还是多选按钮，当选项很多时，就会发现占用的区域较大。在这种
+
+                    情况下，通常用下拉列表或者滚动列表来做。</p>
+                <p>可以用&lt;sclecr&gt;和&lt;option&gt;两个元素实现我们想要的效果，用&lt;sclocb&gt;定义列表，
+
+                    &lt;option&gt;定义列表项。这种列表参数需要的属性分别是&lt;select&gt;的 name
+
+                    属性和&lt;option&gt;的
+
+                    value属性。</p>
+                <p>&lt;select&gt;的size 和mulliple属性决定了是下拉列表还是滚动列表。size 属性用来设置选
+
+                    择栏的高度；multiple 属性用来决定是多选列表，还是单选列表，它的值只能是
+
+                    multiple。</p>
+                <p>如果想让哪个&lt;option&gt;默认选中，只需要给它加上属性 selected="selected"即可。</p>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button2' data-clipboard-target='.copyTarget2' name='copy'>Copy</button>
+            <code class='copyTarget2'>
+示例代码：
+&lt;!DOCTYPE HIML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;表单&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;调查&lt;/h1&gt;
+    &lt;form action="homeplace" method="post"&gt;
+        您的家乡：
+        &lt;select name="homeplace"&gt;
+            &lt;option value="Beijing"&gt;北京&lt;/option&gt;
+            &lt;option value="Tianjin"&gt;天津&lt;/option&gt;
+            &lt;option value="Shanghai"&gt;上海&lt;/option&gt;
+            &lt;option value="Chongqing"&gt;重庆&lt;/option&gt;
+            &lt;option value="Hebei"&gt;河北&lt;/option&gt;
+            &lt;option value="Henan"&gt;河南&lt;/option&gt;
+            &lt;option value="Shanxi"&gt;山西&lt;/option&gt;
+            &lt;option value="Shandong"&gt;山东&lt;/option&gt;
+            &lt;option value="Liaoning"&gt;辽宁&lt;/option&gt;
+            &lt;option value="Jilin"&gt;吉林&lt;/option&gt;
+            &lt;option value="Heilongjiang"&gt;黑龙江&lt;/option&gt;
+            &lt;option value="Jiangsu"&gt;江苏&lt;/option&gt;
+            &lt;option value="Zhejiang"&gt;浙江&lt;/option&gt;
+            &lt;option value="Anhui"&gt;安徽&lt;/option&gt;
+            &lt;option value="Fujian"&gt;福建&lt;/option&gt;
+            &lt;option value="Jiangxi"&gt;江西&lt;/option&gt;
+            &lt;option value="Hubei"&gt;湖北&lt;/option&gt;
+            &lt;option value="Hunan"&gt;湖南&lt;/option&gt;
+            &lt;option value="Guangdong"&gt;广东&lt;/option&gt;
+            &lt;option value="Guangxi"&gt;广西&lt;/option&gt;
+            &lt;option value="Hainan"&gt;海南&lt;/option&gt;
+            &lt;option value="Sichuan"&gt;四川&lt;/option&gt;
+            &lt;option value="Guizhou"&gt;贵州&lt;/option&gt;
+            &lt;option value="Yunnan"&gt;云南&lt;/option&gt;
+            &lt;option value="Shaanxi"&gt;陕西&lt;/opt.ion&gt;
+            &lt;option value="Gansu"&gt;甘肃&lt;/option&gt;
+            &lt;option value="Qinghai"&gt;青海&lt;/option&gt;
+            &lt;option value="Ningxia"&gt;宁夏&lt;/option&gt;
+            &lt;option value="Xinjiang"&gt;新疆&lt;/option&gt;
+            &lt;option value="Inner Mongolia"&gt;内蒙古&lt;/option&gt;
+            &lt;option value="Tibet"&gt;西藏&lt;/option&gt;
+            &lt;option value="Taiwan"&gt;台湾&lt;/option&gt;
+            &lt;option value="Hong Kong"&gt;香港&lt;/option&gt;
+            &lt;option value="Macao"&gt;澳门&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;input type="submit" id="" name="" /&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+                <p>运行结果如下图所示。</p>
+                <img src="./img/2.3.11-2.jpg" alt="" class="mb-3">
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button3' data-clipboard-target='.copyTarget3' name='copy'>Copy</button>
+            <code class='copyTarget3'>
+示例代码：
+&lt;!DOCTYPE HIML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;表单&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h1&gt;调查&lt;/h1&gt;
+    &lt;form action="inquire" method="post"&gt;
+        您在哪些方面会使用计算机？
+        &lt;select name="computer" multiple="multiple"&gt;
+            &lt;option value="edit"&gt;图文编辑&lt;/option&gt;
+            &lt;option value="game"&gt;玩游戏&lt;/option&gt;
+            &lt;option value="video"&gt;看电视、电影&lt;/option&gt;
+            &lt;option value="sns"&gt;网络社交&lt;/option&gt;
+            &lt;option value="develop"&gt;程序开发&lt;/option&gt;
+            &lt;/select&gt;&lt;br /&gt;&lt;br /&gt;
+            您大约什么时候接触的计算机？
+            &lt;select name="age" size="3"&gt;
+            &lt;option value="0+"&gt;0-10岁&lt;/option&gt;
+            &lt;option value="l0+"&gt;11-20岁&lt;/option&gt;
+            &lt;option value="20+"&gt;21-30岁&lt;/option&gt;
+            &lt;option value="30+"&gt;31-40岁&lt;/option&gt;
+            &lt;option value="40+"&gt;41岁以上&lt;/option&gt;
+        &lt;/select&gt;&lt;br /&gt;
+        &lt;input type="submit" id="" name="" /&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+                <p>运行结果如下图所示。</p>
+                <img src="./img/2.3.11-3.jpg" alt="">
+                <p>还有一个表单控件，即多行文本域，顾名思义，用于输入更多的文本。在表单中：
+
+                    行文本用的是&lt;textarea&gt;元素。</p>
+                <p>&lt;textarea&gt;标签具有name、cols、rows3个属性。其中，name用于提交的参数，value
+
+                    源自输入的文本内容；cols和rows分别定义文本框的列数和行数，即宽度和高度。</p>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button4' data-clipboard-target='.copyTarget4' name='copy'>Copy</button>
+            <code class='copyTarget4'>
+示例代码：
+&lt;!DOCTYPE HIML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;表单&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;调查&lt;/h1&gt;
+        &lt;form action="inquire" method="post"&gt;
+            自我评价：&lt;br /&gt;
+            &lt;textarea rows="10" cols="50" name="introduce"&gt;&lt;/textarea&gt;&lt;br /&gt;
+            &lt;input type="submit" id="" name="" /&gt;
+        &lt;/form&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+                <p>运行结果如下图所示。</p>
+                <img src="./img/2.3.11-4.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="lead">3.3：CSS样式单的使用方式</span>
+                <p>CSS样式单可以增强HTML文档的显示效果，为了在HTML中使用CSS样式单，通
+                    常有以下4种方式。
+                    ·引入外部样式文件：通过&lt;link&gt;元素引入外部样式文件，外部样式文件通常是CSS
+                    后缀的文件，这种方式的优点是样式文件与HTML文档分离，一份样式文件可以用
+                    于多份HTML 文档，重用性较好。其基本格式如下：
+                </p>
+                <pre><code class="languages-css">&lt;link type="text/css" rel="stylesheet" href="CSS 样式文件的URL" /&gt;</code></pre>
+                <hr>
+                <p>·引入外部样式文件：通过&lt;link&gt;元素引入外部样式文件，外部样式文件通常是CSS
+                    后缀的文件，这种方式的优点是样式文件与HTML文档分离，一份样式文件可以用
+                    于多份HTML 文档，重用性较好。其基本格式如下：
+                </p>
+                <pre><code class="languages-css">&lt;link type="text/css" rel="stylesheet" href="CSS 样式文件的URL" /&gt;</code></pre>
+                <hr>
+                <p>·导入外部样式文件：通过&lt;style&gt;元素使用＠import 导入，效果与引入外部样式文件相同。其基本格式如下：</p>
+                <pre><code class="languages-css">&lt;style type="text/css"&gt;＠import "CSS样式文件的URL";&lt;/style&gt;
+                    </code></pre>
+                <hr>
+                <p>·使用内部样式定义：直接将CSS样式单写在&lt;style&gt;元素中作为元素的内容。
+                    法重用性差，有时还会导致HTML文档过大，当重复的CSS代码在不同的TM
+                    文档中存在时，必然导致大量的重复下载。在希望某些CSS仅对某个页面有效时，
+                    通常会采用这种形式。其基本格式如下：
+                </p>
+                <pre><code class="languages-css">
+&lt;style type="text/css"&gt;
+    div{
+        background-color: #336699;
+        width: 400px;
+        height: 400px;
+    }
+&lt;/style&gt;
+                </code></pre>
+                <hr>
+                <p>·使用内联样式定义：将CSS样式单写到元素的通用属性style中，这种方式只对单
+                    个元素有效，不会影响整个文件，可以精准地控制HTML文档的显示效果。其基本
+                    格式如下：
+                </p>
+                <pre><code class="languages-css">
+&lt;div style="background-color:#336699;width:400px;height:400px;"&gt;
+&lt;/div&gt;
+                </code></pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

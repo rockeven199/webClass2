@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p><span class="lead">2.4 HTML的预留字符</span></p>
+                <p>在编程语言中有大量的保留字，这些保留字不能用作变量名或者过程名。同样，在
+                    HTML中也存在大量的类似字符，称作预留字符。在实际开发中，这些预留字符是不能使
+                    用的，因为浏览器可能会误读我们想要表达的内容，具体如下：
+                </p>
+                <p><code>&lt;div&gt;我们把&lt;div&gt;元素叫作分块元素。&lt;/div&gt;</code></p>
+                <p>在这句话中，第二个&lt;div&gt;是想表述成一个普通文本，但浏览器并不会这样认为，浏览
+                    器的运行结果如下图所示。
+                </p>
+                <p><img src="./img/2.4.jpg" alt=""></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>所以，在开发中难免会遇到像这种需要显示预留字符的情况。在这种情况下，就需要
+                    将“&lt;”和“＞”替换成“＆lt;”和“＆gt;”，应该写为如下形式：
+                </p>
+                <p>
+                    <code>&lt;div&gt;我们把&amp;lt;div&amp;gt;元素叫作分块元素。&lt;/div&gt;</code>
+                </p>
+                <p>常见的HTML需要转义的字符可以查看下表。</p>
+                <table class='table table-bordered table-striped table-hover'>
+                    <tr class='table-primary'>
+                        <th>显示字符</th>
+                        <th>十进制编号</th>
+                        <th>实体字符</th>
+                    </tr>
+                    <tr>
+                        <td>"</td>
+                        <td>&amp;#34;</td>
+                        <td>&amp;quot;</td>
+                    </tr>
+                    <tr>
+                        <td>&</td>
+                        <td>&amp;#38;</td>
+                        <td>&amp;amp;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>&amp;#60;</td>
+                        <td>&amp;lt;</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>&amp;#62;</td>
+                        <td>&amp;gt;</td>
+                    </tr>
+                    <tr>
+                        <td>空格，用于显示连续空格</td>
+                        <td>&amp;#160;</td>
+                        <td>&amp;nbsp;</td>
+                    </tr>
+                </table>
+                <p>上表中出现了两种转义，任意一种都可以实现，但实体字符便于记忆，而十进制编号
+                    兼容性较强。
+                </p>
+                <p>HTML还提供了大量的实体字符，用于输入一些特殊符号，如下表所示，当然，我们
+                    也可以通过特殊的输入法输入，但没有实体字符那么方便。
+                </p>
+                <table class='table table-bordered table-striped table-hover'>
+                    <tr class='table-primary'>
+                        <th>显示字符</th>
+                        <th>十进制编号</th>
+                        <th>实体字符</th>
+                    </tr>
+                    <tr>
+                        <td>&yen;（人民币元）</td>
+                        <td>&amp;#165;</td>
+                        <td>&amp;yen;</td>
+                    </tr>
+                    <tr>
+                        <td>&euro;（欧元）</td>
+                        <td>&amp;#8364;</td>
+                        <td>&amp;euro;</td>
+                    </tr>
+                    <tr>
+                        <td>&copy;（coyright版权）</td>
+                        <td>&amp;#169;</td>
+                        <td>&amp;copy;</td>
+                    </tr>
+                    <tr>
+                        <td>&reg;（商标）</td>
+                        <td>&amp;#174;</td>
+                        <td>&amp;reg;</td>
+                    </tr>
+                    <tr>
+                        <td>&trade;（商标）</td>
+                        <td>&amp;#8482;</td>
+                        <td>&amp;trade;</td>
+                    </tr>
+                    <tr>
+                        <td>&times;（乘号）</td>
+                        <td>&amp;#215;</td>
+                        <td>&amp;times;</td>
+                    </tr>
+                    <tr>
+                        <td>&divide;（除号）</td>
+                        <td>&amp;#247;</td>
+                        <td>&amp;divide;</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

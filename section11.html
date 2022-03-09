@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一篇：web页面制作基础</title>
+    <link href="./css/animate.css" type="text/css" rel="stylesheet">
+    <link href="./malihu-custom-scrollbar/jquery.mCustomScrollbar.min.css" type="text/css" rel="stylesheet">
+    <link href="./css/frame-aside-model.css" type="text/css" rel="stylesheet">
+    <link href="./css/frame-model.css" type="text/css" rel="stylesheet">
+    <link href="./jquery-ui-1.13.0.custom/jquery-ui.min.css" type="text/css" rel="stylesheet">
+    <link href="./FontAwesome.Pro.5.15.1.Web/css/all.css" type="text/css" rel="stylesheet">
+    <link href="./FontAwesome.Pro.5.15.1.Web/css/light.css" type="text/css" rel="stylesheet">
+
+
+    <script type="text/javascript" src="./js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="./jquery-ui-1.13.0.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./malihu-custom-scrollbar/js/uncompressed/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="./malihu-custom-scrollbar/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="./js/frame-model.js"></script>
+    <script type="text/javascript" src="./js/section1.js"></script>
+    <script type="text/javascript" src="./FontAwesome.Pro.5.15.1.Web/attribution.js"></script>
+    <script type="text/javascript" src="./FontAwesome.Pro.5.15.1.Web/js/all.js"></script>
+    <script type="text/javascript" src="./FontAwesome.Pro.5.15.1.Web/js/light.min.js"></script>
+    <script type="text/javascript" src="./js/Settinginit.js"></script>
+</head>
+
+<body style="overflow: hidden;" id="main-page">
+    <div id="setting-control">
+        <h2>设置</h2>
+        <div class="color-area">
+            <label for="bgcolor">颜色</label>
+            <div class="color-item">
+                <label for="green">森林绿</label>
+                <input type="radio" name="bgcolor" id="green">
+                <label for="red">夕阳红</label>
+                <input type="radio" name="bgcolor" id="red">
+            </div>
+            <div class="color-item">
+                <label for="pink">少女粉</label>
+                <input type="radio" name="bgcolor" id="pink">
+                <label for="orange">橘子橙</label>
+                <input type="radio" name="bgcolor" id="orange">
+            </div>
+            <div class="color-item">
+                <label for="white">虚无白</label>
+                <input type="radio" name="bgcolor" id="white" checked="checked">
+                <label for="black">暗夜黑</label>
+                <input type="radio" name="bgcolor" id="black">
+            </div>
+        </div>
+    </div>
+    <div id="body-control">
+        <article id="show-article">
+            <div id="add">
+                <svg id="next-page" t="1644573023558" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="4476" width="200" height="200">
+                    <path
+                        d="M329.607529 58.247529l6.144 5.12L773.421176 501.037176a44.574118 44.574118 0 0 1 4.457412 5.180236l-4.457412-5.180236a44.393412 44.393412 0 0 1 5.12 56.380236 51.681882 51.681882 0 0 1-0.843294 1.204706l-4.276706 4.939294-437.669647 437.669647a44.212706 44.212706 0 0 1-67.644235-56.380235l5.12-6.144 406.347294-406.40753L273.227294 125.891765A44.212706 44.212706 0 0 1 329.607529 58.247529z"
+                        p-id="4477" width="600"></path>
+                </svg>
+                <svg id="last-page" t="1644572905962" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="3246" width="200" height="200">
+                    <path d="M798.72 61.44L737.28 0 220.16 517.12 737.28 1024l61.44-61.44L348.16 512l450.56-450.56z"
+                        p-id="3247">
+                    </path>
+                </svg>
+                <iframe frameborder='0' id='iframe' src='./welcome.html'></iframe>
+            </div>
+        </article>
+        <!-- 导航条 -->
+        <header class="header-container">
+            <i id="settings" class="fas fa-bars fa-2x"></i>
+            <section style="height: 100%;width: 25%;">
+                <ul style="width: 100%;height: 100%;">
+                    <li class="title">
+                        <a href="./index.html">
+                            <h3>WEB前端开发（初级）</h3>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section style="height: 100%;width:75%;">
+                <nav>
+                    <ul id="header">
+                        <ul id="nav-part">
+                            <li id="nav-part-title"><span>第一篇</span></li>
+                            <li value="11" id="nav-part-brother"><a href="./section11.html">Web页面制作基础</a></li>
+                        </ul>
+                        <ul id="nav-part">
+                            <li id="nav-part-title"><span>第二篇</span></li>
+                            <li value="22" id="nav-part-brother"><a href="./section22.html">JavaScript程序设计</a></li>
+                        </ul>
+                        <ul id="nav-part">
+                            <li id="nav-part-title"><span>第三篇</span></li>
+                            <li value="33" id="nav-part-brother"><a href="./section33.html">HTML5和CSS3开发基础与应用</a></li>
+                        </ul>
+                        <ul id="nav-part">
+                            <li id="nav-part-title"><span>第四篇</span></li>
+                            <li value="44" id="nav-part-brother"><a href="./section44.html">轻量级框架应用</a></li>
+                        </ul>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <!-- 侧边栏大纲 -->
+        <aside style="height: 91.5%;">
+            <input type="text" id="tipsValue" value="11" hidden="true">
+            <ul id="main" class="main">
+                <li id="main-title">
+                    <h4>第1章：Web简介</h4>
+                </li>
+                <li value="1" id="main-simple">
+                    <h4 id="content-text"><a>1.1：Web的诞生</a></h4>
+                </li>
+                <!-- 子菜单 -->
+                <ul id="content" class="ListHeader">
+                    <li style="position: relative;" id="menu-button">
+                        <h4 id="section-title">1.2：Web的相关概念</h4>
+                    </li>
+                    <li id="ChildContent" value="2"><a href="#">1.2.1：WWW</a></li>
+                    <li id="ChildContent" value="3"><a href="#">1.2.2：WebSite</a></li>
+                    <li id="ChildContent" value="4"><a href="#">1.2.3：URL</a></li>
+                    <li id="ChildContent" value="5"><a href="#">1.2.4：Web标准</a></li>
+                    <li id="ChildContent" value="6"><a href="#">1.2.5：Web浏览器</a></li>
+                    <li id="ChildContent" value="7"><a href="#">1.2.6：Web服务器</a></li>
+                </ul>
+                <li value="8" id="main-simple">
+                    <h4 id="content-text"><a href="#">1.3：Web开发</a></h4>
+                </li>
+                <li value="9" id="main-simple">
+                    <h4 id="content-text"><a href="#">1.4：本章小结</a></h4>
+                </li>
+                <li id="main-title">
+                    <h4>第2章：HTML基础</h4>
+                </li>
+                <ul id="content" class="ListHeader">
+                    <li style="position: relative;" id="menu-button">
+                        <h4 id="section-title">2.1：HTML概述</h4>
+                    </li>
+                    <li id="ChildContent" value="10"><a href="#">2.1.1：标记语言</a></li>
+                    <li id="ChildContent" value="11"><a href="#">2.1.2：从HTML到XHTML</a></li>
+                    <li id="ChildContent" value="12"><a href="#">2.1.3：HTML基本结构</a></li>
+                    <li id="ChildContent" value="13"><a href="#">2.1.4：HTML的相关基本定义</a></li>
+                    <li id="ChildContent" value="14"><a href="#">2.1.5：HTML的常用开发工具</a></li>
+                </ul>
+                <ul id="content" class="ListHeader">
+                    <li style="position: relative;" id="menu-button">
+                        <h4 id="section-title">2.2：HTML的全局属性</h4>
+                    </li>
+                    <li id="ChildContent" value="15"><a href="#">2.2.1：HTML的标准全局属性</a></li>
+                    <li id="ChildContent" value="16"><a href="#">2.2.2：HTML的全局事件属性</a></li>
+                </ul>
+                <ul id="content" class="ListHeader">
+                    <li style="position: relative;" id="menu-button">
+                        <h4 id="section-title">2.3：HTML的元素</h4>
+                    </li>
+                    <li id="ChildContent" value="17"><a href="#">2.3.1：HTML的主体元素</a></li>
+                    <li id="ChildContent" value="18"><a href="#">2.3.2：HTML的无语义元素</a></li>
+                    <li id="ChildContent" value="19"><a href="#">2.3.3：HTML的标题元素</a></li>
+                    <li id="ChildContent" value="20"><a href="#">2.3.4：HTML的段落元素</a></li>
+                    <li id="ChildContent" value="21"><a href="#">2.3.5：HTML的注释元素</a></li>
+                    <li id="ChildContent" value="22"><a href="#">2.3.6：HTML的格式化元素</a></li>
+                    <li id="ChildContent" value="23"><a href="#">2.3.7：HTML的图片元素</a></li>
+                    <li id="ChildContent" value="24"><a href="#">2.3.8：HTML的超连接元素</a></li>
+                    <li id="ChildContent" value="25"><a href="#">2.3.9：HTML的列表元素</a></li>
+                    <li id="ChildContent" value="26"><a href="#">2.3.10：HTML的表格元素</a></li>
+                    <li id="ChildContent" value="27"><a href="#">2.3.11：HTML的表单元素</a></li>
+                    <li id="ChildContent" value="28"><a href="#">2.3.12：HTML的框架元素</a></li>
+                </ul>
+                <li value="29" id="main-simple">
+                    <h4 id="content-text"><a href="#">2.4：HTML的预留字符</a></h4>
+                </li>
+                <li value="30" id="main-simple">
+                    <h4 id="content-text"><a href="#">2.5：本章小结</a></h4>
+                </li>
+                <li id="main-title">
+                    <h4>第3章：CSS基础</h4>
+                </li>
+                <li value="31" id="main-simple">
+                    <h4 id="content-text"><a href="#">3.1：什么是CSS</a></h4>
+                </li>
+                <li value="32" id="main-simple">
+                    <h4 id="content-text"><a href="#">3.2：CSS的历史</a></h4>
+                </li>
+                <li value="33" id="main-simple">
+                    <h4 id="content-text"><a href="#">3.3：CSS样式单的使用方式</a></h4>
+                </li>
+                <li value="34" id="main-simple">
+                    <h4 id="content-text"><a href="#">3.4：CSS的两个特性</a></h4>
+                </li>
+                <li value="35" id="main-simple">
+                    <h4 id="content-text"><a href="#">3.5：CSS的基本语法</a></h4>
+                </li>
+                <ul id="content" class="ListHeader">
+                    <li style="position: relative;" id="menu-button">
+                        <h4 id="section-title">3.6：CSS的选择器</h4>
+                    </li>
+                    <li id="ChildContent" value="36"><a href="#">3.6.1：元素选择器</a></li>
+                    <li id="ChildContent" value="37"><a href="#">3.6.2：通配符选择器</a></li>
+                    <li id="ChildContent" value="38"><a href="#">3.6.3：属性选择器</a></li>
+                    <li id="ChildContent" value="39"><a href="#">3.6.4：派生选择器|上下文选择器</a></li>
+                    <li id="ChildContent" value="40"><a href="#">3.6.5：id选择器</a></li>
+                    <li id="ChildContent" value="41"><a href="#">3.6.6：类选择器</a></li>
+                    <li id="ChildContent" value="42"><a href="#">3.6.7：伪类选择器</a></li>
+                    <li id="ChildContent" value="43"><a href="#">3.6.8：伪元素选择器</a></li>
+                </ul>
+                <ul id="content" class="ListHeader">
+                    <li style="position: relative;" id="menu-button">
+                        <h4 id="section-title">3.7：CSS的属性</h4>
+                    </li>
+                    <li id="ChildContent" value="44"><a href="#">3.7.1：CSS背景属性</a></li>
+                    <li id="ChildContent" value="45"><a href="#">3.7.2：CSS字体属性</a></li>
+                    <li id="ChildContent" value="46"><a href="#">3.7.3：CSS文本属性</a></li>
+                    <li id="ChildContent" value="47"><a href="#">3.7.4：CSS尺寸属性</a></li>
+                    <li id="ChildContent" value="48"><a href="#">3.7.5：CSS列表属性</a></li>
+                    <li id="ChildContent" value="49"><a href="#">3.7.6：CSS表格属性</a></li>
+                    <li id="ChildContent" value="50"><a href="#">3.7.7：CSS内容属性</a></li>
+                </ul>
+                <ul id="content" class="ListHeader">
+                    <li style="position: relative;" id="menu-button">
+                        <h4 id="section-title">3.8：CSS盒模型</h4>
+                    </li>
+                    <li id="ChildContent" value="51"><a href="#">3.8.1：CSS内边距属性</a></li>
+                    <li id="ChildContent" value="52"><a href="#">3.8.2：CSS值复制</a></li>
+                    <li id="ChildContent" value="53"><a href="#">3.8.3：CSS外边距属性</a></li>
+                    <li id="ChildContent" value="54"><a href="#">3.8.4：CSS边框属性</a></li>
+                    <li id="ChildContent" value="55"><a href="#">3.8.5：CSS轮廓属性</a></li>
+                </ul>
+                <ul id="content" class="ListHeader">
+                    <li style="position: relative;" id="menu-button">
+                        <h4 id="section-title">3.9：布局属性</h4>
+                    </li>
+                    <li id="ChildContent" value="56"><a href="#">3.9.1：CSS浮动属性</a></li>
+                    <li id="ChildContent" value="57"><a href="#">3.9.2：CSS定位属性</a></li>
+                </ul>
+                <li value="58" id="main-simple">
+                    <h4 id="content-text"><a href="#">3.10：本章小结</a></h4>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    <!-- 内容显示区域 -->
+    <input type="text" id="mission-title" value="首页">
+    <input type="button" id="ui_status" value="全屏"
+        style="width:50px;position:absolute;text-align: center;color: white;border:0;background-color:rgb(54, 54, 54);height: 20px;right:320px;bottom:0;border:1px solid transparent;border-radius:5px;z-index: 999;">
+    <input type="text" value="第一篇：web页面制作基础" disabled="true" id="title_status"
+        style="width:300px;position:absolute;text-align: center;color: white;border:0;background-color:rgb(54, 54, 54);height: 20px;right: 0;bottom:0;border:1px solid transparent;border-radius:5px;z-index: 999;right:1%;">
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p><span class="lead">2.3.1 HTML的主体元素</span></p>
+                <p>
+                    一个完整的HTML文档
+                    必须有它的主体元素，前面已经给出了一个基本结构的例子，
+                    但它不是一个完整的HTML文档，将上面的例子在IE中运行，运行结果如下图所示。
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <img src="./img/2.3.1.jpg" alt="" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <p>运行后出现乱码，这也说明它不是一个完整的HTML文档。 一个最简洁的HTML文档应该如下：</p>
+            </div>
+            <div class="col-md-12">
+                <pre class="language-xml text-left">
+                    <button type="button" class="btn btn-outline-primary" id="copy-button1" data-clipboard-target=".copyTarget1" name="copy">Copy</button>
+                    <code class="copyTarget1">
+&lt;!DOCTYPE HTML PUBLIC -//W3C//DTD HTML 4.01//EN http://www.w3.org/TR/htm14/strict.dtd&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-eguiv="content-type" content="text/html; charset=utf-8"&gt;
+             &lt;title&gt;标题&lt;/title&gt;
+        &lt;/head&gt;
+    &lt;body&gt;
+        文档主体
+    &lt;/body>&gt;
+&lt;/html>&gt;
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-5">
+                <p>IE中运行结果正常，如下图所示。</p>
+            </div>
+            <br />
+            <div class="col-md-12">
+                <img src="./img/2.3.1-2.jpg" alt="" />
+            </div>
+        </div>
+        <div class="row mt-5 text-left m-2">
+            <div class="col-md-12">
+                <br />
+                <p>
+                    <span>一个完整的HTML文档大体包含以下标签</span>
+                </p>
+                <div class="col-md-12">
+                    <p>·&lt;!DOCTYPE&gt;:声明文档类型。</p>
+                    <p>·&lt;html&gt;:HTML元素真正的根元素。</p>
+                    <p>·&lt;head&gt;:定义HTML文档的文档头。&lt;head&gt;可以包含如下元素。</p>
+                    <p>·&lt;title&gt;:定义HTML文档的标题，可以用的属性有dir、lang。</p>
+                    <p>·&lt;base&gt;:为页面上的所有链接规定默认地址或者默认目标（target）。</p>
+                    <p>·&lt;link&gt;:定义文档与外部资源之间的关系，常用于链接CSS样式表。</p>
+                    <p>·&lt;meta&gt;:提供关于HTML的元数据，不会显示在页面，一般用于向浏览器传递信
+                        息或者命令，作为搜索引擎，或者用于其他Web服务。 </p>
+                    <p>·&lt;style&gt;:用于为HTML文档定义样式信息。</p>
+                    <p>·&lt;script&gt;:用于定义客户端脚本，如JavaScript。</p>
+                    <p>·&lt;body&gt;:定义HTML文档的文档体。</p>
+                    <p>一个&lt;head&gt;元素可以包含多个&lt;meta&gt;元素。&lt;meta&gt;元素共有两个属性，分别是name属性和
+                        http-equiv属性。</p>
+                    <p>name属性主要用于描述网页，如网页的关键词、叙述等。与之对应的属性值为content, content中的内容是对name
+                        填入类型的具体描述，通常用于搜索引擎抓取。</p>
+                    <p>&lt;meta name=参数＂content=具体的描述＂&gt;</p>
+                    <p>其中，name属性共有以下几种参数。</p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- <p>&lt;meta&gt;标签中 name属性的语法格式如下：</p> -->
+                            <p>keywords,用于告诉搜索引擎该网页的关键字。</p>
+                            <p>&lt;meta name=keywords content=香蕉，苹果＂</p>
+                            <p>description,用于告诉搜索引擎该网页的主要内容。</p>
+                            <p>description,用于告诉搜索引擎该网页的主要内容。</p>
+                            <p>&lt;meta name=description content=水果百科，获取水果信息的信息库＂＞ </p>
+                            <p>tobots,用于告诉搜索引擎网页是否需要索引。content的6个参数如下。</p>
+                            <p>all:默认参数，搜索引擎将索引此网页与继续通过此网页的链接索引，等价于 index、follow。</p>
+                            <p>none:搜索引擎将忽略此网页，等价于noindex、nofollow。</p>
+                            <p>index:搜索引擎索引此网页。</p>
+                            <p>noindex:搜索引擎不索引此网页。</p>
+                            <p>follow:搜索引擎继续通过此网页的链接索引搜索其他的网页。</p>
+                            <p>nofollow:搜索引擎不继续通过此网页的链接索引搜索其他的网页。</p>
+                            <p>&lt;meta name="robots"content="index,follow"&gt;</p>
+                            <p>author,用于标注该网页作者，通常后面也会有邮箱。</p>
+                            <p>&lt;meta name="author"content="WangWu,someone@example.com"&gt;</p>
+                            <p>generator,用于标注该网页是什么软件编写的。</p>
+                            <p>&lt;meta name="enerator" content="Notepad++"&gt;</p>
+                            <p>copyright,用于标注版权信息。</p>
+                            <p>&lt;meta name="copyright" content="Lxxyx"&gt;</p>
+                            <p>revisit-after,如果页面不是经常更新，为了减轻搜索引擎爬虫为服务器带来的压力，可以设置一个爬虫的重访时间。如果重访时间过短，爬虫将按它们定义的默
+                                认时间访问。&lt;meta name="revisit-after" content="10 days"&gt;</p>
+                            <p>http-equiv属性相当于http的文件头作用，equiv是equivalent的缩写。它可以向浏览器定义一些有用的信息，以帮助正确和精确地显示网页内容，与之对应的属性值为content,
+                                content中的内容是对http-equiv 填入类型的具体描述，meta标签中 http-equiv属性的语法格式如下： </p>
+                            <p>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>&lt;meta http-equiv=参数＂content=具体的描述＂&gt;</p>
+                                        <p>其中，http-equiv 属性主要有以下几种参数。</p>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <p> content-Type,用于设定网页字符集，便于浏览器解析与渲染页面，其中字符集可以更换，但如果国际通用，则尽量用utf-8。</p>
+                                                <p> &lt;meta http-equiv"content-Type"
+                                                    content="text/html;charset=utf-8"&gt;</p>
+                                                <p> cache-control,用于告知浏览器如何缓存某个响应及缓存多长时间。它的参数有如下几种。</p>
+                                                <p> no-cache:先发送请求，与服务器确认该资源是否被更改，如果未被更改，则使用 缓存。</p>
+                                                <p> no-store:不允许缓存，每次都要去服务器上下载完整的响应。</p>
+                                                <p> public:缓存所有响应，但并不是必需的，因为max-age也可以达到相同的效果。</p>
+                                                <p> private:只为单个用户缓存，因此不允许任何中继进行缓存。</p>
+                                                <p> max-age:表示当前请求开始，相应响应在多久内能被缓存和重用，而不去服务器重新请求。例如，max-agc=60表示响应可以再缓存和重用60秒。
+                                                </p>
+                                                <p> &lt;meta http-equiv="cache-control" content="no-cache"&gt;</p>
+                                                <p> expires,用于设定网页的到期时间，过期后必须到服务器上重新传输。</p>
+                                                <p> &lt;meta http-equiv="expirescontent=Sunday 26 October 2016 01:00
+                                                    GMTA</p>
+                                                <p> refresh",网页将在设定的时间内，自动刷新并转向设定的网址。 &lt;meta http-equiv="refresh"</p>
+                                                <p> content="5";URL="http://www.baidu.com/"&gt;
+                                                    这句话的意思是5秒后转向http://www.baidu.com/网页。</p>
+                                                <p> Set-Cookie,用于设置网页过期，必须使用GMT的时间格式。 &lt;meta http-equiv="Set-Cookie"
+                                                </p>
+                                                <p> content="cookievalue=tokenID"; path=/; expires="Monday,31-Dec-18
+                                                    10:00:00 GMT"&gt;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

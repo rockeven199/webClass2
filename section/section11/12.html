@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>Document</title>
+	<link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+	<link rel="stylesheet" href="../../css/article.css" />
+	<link rel="stylesheet" href="../../css/animate.css" />
+	<script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+	<script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+	<script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+	<script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+	<div id="mask">
+		<svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+			p-id="2129" width="200" height="200">
+			<path
+				d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+				p-id="2130"></path>
+		</svg>
+		<img src="" alt="" id="maskimg">
+	</div>
+	<div id="CopySuccessInfo">
+		<div class="col-md-2 offset-5">
+			<div class="text-success text-center" id="success">Success!</div>
+		</div>
+	</div>
+	<div id="CopyErrorInfo">
+		<div class="col-md-2 offset-5">
+			<div class="text-danger text-center" id="error">Error!</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p><span class="lead text-left">2.1.3 HTML的基本结构</span></p>
+				<p>
+					HTML
+					文件由文件头&lt;head&gt;和文件体&lt;body&gt;两部分组成，在这两部分外面还要加
+					上标签&lt;html&gt;&lt;/html&gt;说明此文件是HTML文件，这样浏览器才能正确识别HTML文件。
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<p>HTML的基本结构如下：</p>
+			</div>
+			<div class="col-md-12">
+				<pre class="language-xml text-left">
+				<button type="button" class="btn btn-outline-primary" id="copy-button1" data-clipboard-target=".copyTarget1" name="copy">Copy</button>
+			  	<code class="copyTarget1">
+&lt;!DOCTYPE HTML PUBLIC"-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm14/ strict.dtd"&gt; 
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;标题&lt;/title&gt;
+	&lt;/head&gt; 
+	&lt;body&gt; 
+		文档主体
+	&lt;/body&gt; 
+&lt;/html&gt; 
+				</code>
+		  		</pre>
+				<p>将这段文字输入任意文本编辑器中，注意不要使用Windows的写字板程序，或者Microsoft Office
+					Word、WPS等多功能文字处理处理软件。输入完成后保存，保存时，将文本保存类型设为"*.*"，文件名随意。但它的后缀名一定是html或者hml。将文件用浏览器打开即可看到下图。</p>
+				<img src="./img/2.1.3.jpg" alt="">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<br />
+				<p>
+					在HTML的基本结构中，可以看到用“&lt;”和“>”括起来的单词，这个通常叫作元素，
+					<span> 元素常见的格式如下。 </span>
+				</p>
+				<div class="col-md-12">
+					<p>·双标签：双标签由开始标签和结束标签两部分构成，必须成对使用，如&lt;div&gt;和&lt;/div&gt;。</p>
+					<p>
+						·单标签：某些标签单独使用就可以完整地表达意思，这种标签就叫作单标签，如换
+						行标签&lt;br&gt;。值得注意的是，在HTML中，单标签没有结束标签，换行标签写作&lt;br&gt;,
+						但在XHTML中，单标签必须被正确地关闭，换行标签需要写作&lt;br/&gt;。根据标记语
+						言都要正确关闭这一项原则，或许在不远的将来，这种单标签都会要求必须关闭， 所以，使用&lt;br/&gt;
+					</p>
+					<p>
+						·在基本结构中可以看到一个特殊的标签，即&lt;!DOCTYPE&gt;,这个标签必须位于HTML
+						的第一行，且位于&lt;html&gt;标签之前，用于声明文档类型，以及描述该文档可以使用
+						的标签和属性，写法是固定的。值得注意的是，XTHML的&lt;!DOCTYPE&gt;和HTML
+						有稍许不同，但也大同小异。下表汇总了HTML 4。01和XHTML1。0所有的DTD。
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table table-striped table-hover">
+					<tr>
+						<th rowspan="3" class="table-primary align-center">HTML 4.01</th>
+						<th>严格模式</th>
+						<td>
+							&lt;!DOCTYPE HTMI PUBLIC "-//W3C//DTD HTML 4.01//EN"
+							"http://www.w3.org/TR/html4/strict.dtd"&gt;
+						</td>
+					</tr>
+					<tr>
+						<th>过渡模式</th>
+						<td>
+							&lt;!DOCTYPE HTMI PUBLIC "-//W3C//DTD HTML 4.01//Transitional//EN"
+							"http://www.w3.org/TR/html4/strict.dtd &gt;
+						</td>
+					</tr>
+					<tr>
+						<th>框架集</th>
+						<td>
+							&lt;!DOCTYPE HTML PUBLIC -//W3C//DTD HTML 4.01 Frameset//EN" "http://
+							www.w3.org/TR/htm14/frameset.dtd"&gt;
+						</td>
+					<tr>
+						<th rowspan="3" class="table-primary">XHTML 1.0</th>
+						<th>严格模式</th>
+						<td>
+							&lt;!DOCTYPE HTMI PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+							"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">&gt;
+						</td>
+					</tr>
+					<tr>
+						<th>过渡模式</th>
+						<td>
+							&lt;!DOCTYPE HTMI PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+							"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">&gt;
+						</td>
+					</tr>
+					<tr>
+						<th>框架集</th>
+						<td>
+							&lt;!DOCTYPE HTMI PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+							"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">&gt;
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				·大部分标签都可以在标签内包含一些属性，且各属性无先后顺序，属性也可以省略，
+				省略即取默认值。例如，&lt;title id="title"&gt;标题&lt;/title&gt;。
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

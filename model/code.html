@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/code.css">
+	<link rel="stylesheet" href="./highlight/styles/atom-one-dark.min.css">
+	<script type="text/javascript" src="./js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="./highlight/highlight.js"></script>
+	<script type="text/javascript" src="./highlight/languages/javascript.min.js"></script>
+	<script type="text/javascript" src="./js/clipboard.min.js"></script>
+	<!-- <script type="text/javascript" src="./js/code.js"></script> -->
+</head>
+
+<body>
+	<section class="code-container">
+		<ul class="code-container-header">
+			<ul class="code-container-button">
+				<li style="background-color:#fc605c" class="code-button" data-clipboard-target=".code-line"
+					data-clipboard-action="copy" id="copy-button" title="Copy Code"></li>
+				<li style="background-color:#fcbb40" class="code-button"></li>
+				<li style="background-color:#34c648" class="code-button"></li>
+			</ul>
+			<input type="text" readonly disabled value="Copy Status" class="status-tips">
+		</ul>
+		<ul class="code-container-content">
+			<ul class="code-line-num">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<ul class="code-line">
+				<li class="code-text">
+					<pre><code>window.onload=function(){</code></pre>
+				</li>
+				<li class="code-text">
+					<pre><code>  alert("hello world")</code></pre>
+				</li>
+				<li class="code-text">
+					<pre><code>}</code></pre>
+				</li>
+			</ul>
+		</ul>
+	</section>
+</body>
+<script>
+	window.onload = function () {
+		$('code').addClass("language-javascript");
+		hljs.highlightAll()
+		var clipboard = new ClipboardJS('#copy-button');
+		clipboard.on('success', function (e) {
+			console.log(e);
+		});
+		clipboard.on('error', function (e) {
+			console.log(e);
+		});
+	}
+	$("#copy-button").click(function () {
+		$(".status-tips").val("Success!");
+	})
+</script>
+
+</html>

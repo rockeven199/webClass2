@@ -1,0 +1,15 @@
+{
+    "jupyter.jupyterServerType": "local",
+    "editor.tokenColorCustomizations": {
+        "comments": "#45b787" // 注释
+    },
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": false,
+    "python.testing.promptToConfigure": false,
+    "liveServer.settings.port": 5501,
+    "commentTranslate.hover.enabled": true, //如果后面还加内容，记得块末用逗号隔开
+}

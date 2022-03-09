@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p><span class="lead">2.3.3 HTML的标题元素</span></p>
+                <p>&lt;h1&gt;~&lt;h6&gt;标签可定义标题。其中，&lt;h1&gt;定义最大的标题，&lt;h6&gt;定义最小的标题。由
+
+                    于&lt;h&gt;元素拥有确切的语义，因此在开发过程中需要选择恰当的标签层级构建文档的结构。
+
+                    通常，&lt;h1&gt;用于最顶层的标题：&lt;h2&gt;、&lt;h3&gt;和&lt;h4&gt;用于较低的层级：&lt;h5&gt;和&lt;h6&gt;由于文档
+
+                    层级关系，使用频率比较低。该标签支持全局标准属性和全局事件属性。</p>
+                <p>在实际构建文档结构过程中，可能还会用到&lt;hr&gt;标签，该标签是 horizontal rule的缩写，
+
+                    使用该标签会在浏览器中创建一条水平线，可以在视觉上将文档分隔成多个部分。</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                示例代码
+            </div>
+            <div class="col-md-12">
+                <pre class="language-xml text-left">
+            <button type="button" class="btn btn-outline-primary" id="copy-button1" data-clipboard-target=".copyTarget1" name="copy">Copy</button>
+            <code class="copyTarget1">
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm14/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+    &lt;title&gt;标题&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Web 前端开发&lt;/h1&gt;
+    &lt;h2&gt;HTML基础&lt;/h2&gt;
+    &lt;h3&gt;HTML元素&lt;/h3&gt;
+    &lt;h4&gt;HTML的主体元素&lt;/h4&gt;
+    &lt;h4&gt;HTML的标题元素&lt;/h4&gt;
+    &lt;h3&gt;HTML属性&lt;/h3&gt;
+        &lt;hr /&gt;
+    &lt;h2&gt;CSS基础&lt;/h2&gt;
+        &lt;hr/&gt;
+    &lt;h2&gt;JavaScript基础&lt;/h2&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>运行结果如下图所示</p>
+                <p><img src="./img/2.3.3.jpg" alt=""></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

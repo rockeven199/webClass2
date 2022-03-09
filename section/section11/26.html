@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p> <span class="lead">2.3.10：HTML的表格元素</span></p>
+                <p> 表格用&lt;table&gt;标签定义。表格标题用&lt;caption&gt;标签定义，每个表格均有若干行，用&lt;tr&gt;
+                    标签定义，每行被分割为若干单元格，用&lt;td&gt;标签定义，当单元格是表头时，一般用&lt;th&gt;
+                    标签定义。</p>
+                <p>当表格分成头部、主体、底部时，就可以用&lt;thead&gt;、&lt;tbody&gt;、&lt;tfoot&gt;3个标签构建表
+
+                    格，对这3个标签，每个标签内同样均有若干行。</p>
+                <p>&lt;table&gt;、&lt;caption&gt;、&lt;t&gt;、&lt;th&gt;、&lt;thead&gt;、&lt;tbody&gt;、&lt;tfoot&gt;标签均支持全局标准属性
+
+                    和全局事件属性。</p>
+                <p>&lt;table&gt;标签常用属性如下表所示。
+                </p>
+                <table class='table table-bordered table-striped table-hover'>
+                    <tr class='table-primary'>
+                        <th>属性</th>
+                        <th>含义</th>
+                    </tr>
+                    <tr>
+                        <td>border</td>
+                        <td>设置表格的边框宽度</td>
+                    </tr>
+                    <tr>
+                        <td>width</td>
+                        <td>设置表格的宽</td>
+                    </tr>
+                    <tr>
+                        <td>height</td>
+                        <td>设置表格的高</td>
+                    </tr>
+                    <tr>
+                        <td>cellpadding</td>
+                        <td>设置内边距</td>
+                    </tr>
+                    <tr>
+                        <td>cellspacing</td>
+                        <td>设置外边距</td>
+                    </tr>
+                </table>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button1' data-clipboard-target='.copyTarget1' name='copy'>Copy</button>
+            <code class='copyTarget1'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;表格&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;table&gt;
+            &lt;caption&gt;职业调查&lt;/caption&gt;
+            &lt;tr&gt;
+                &lt;th&gt;姓名&lt;/th&gt;
+                &lt;th&gt;性别&lt;/th&gt;
+                &lt;th&gt;职业&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;张三&lt;/td&gt;
+                &lt;td&gt;男&lt;/td&gt;
+                &lt;td&gt;学生&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;李四&lt;/td&gt;
+                &lt;td&gt;女&lt;/td&gt;
+                &lt;td&gt;教师&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+        &lt;table border="1" cellpadding="10" cellspacing="10"&gt;
+            &lt;caption&gt;职业调查&lt;/caption&gt;
+            &lt;tr&gt;
+                &lt;th&gt;姓名&lt;/th&gt;
+                &lt;th&gt;性别&lt;/th&gt;
+                &lt;th&gt;职业&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;张三&lt;/td&gt;
+                &lt;td&gt;男&lt;/td&lt;
+                &lt;td&gt;学生&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;李四&lt;/td&gt;
+                &lt;td&gt;女&lt;/td&gt;
+                &lt;td&gt;教师&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+                <p>运行结果如下图所示。</p>
+                <img src="./img/2.3.10-1.jpg" alt="">
+                <p>&lt;td&gt;的常用属性有两个：colspan,用于定义单元格跨行；rowspan,用于定义单分路
+                    跨列。</p>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button2' data-clipboard-target='.copyTarget2' name='copy'>Copy</button>
+            <code class='copyTarget2'>
+示例代码：
+&lt;!DOCTYPE HIML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html";charset="utf-8"&gt;
+        &lt;title&gt;表格&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;table border="1" width="300" height="300" cellspacing="0"&gt;
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;&lt;/td&gt;
+                &lt;td rowspan="2"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td rowspan="2"&lt;td&gt;
+                &lt;td&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td colspan="2"&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+                <p>运行结果如下图所示。</p>
+                <img src="./img/2.3.10-2.jpg" alt="">
+                <p>&lt;tbody&gt;、&lt;thead&gt;、&lt;tfoot&gt;标签通常用于对表格内容进行分组。</p>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button3' data-clipboard-target='.copyTarget3' name='copy'>Copy</button>
+            <code class='copyTarget3'>
+示例代码：
+&lt;!DOCTYPE HIML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;表格&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;table border="1"&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;td&gt; &lt;/td&gt;
+                    &lt;td&gt;收入&lt;/td&gt;
+                    &lt;td&gt;支出&lt;/td&gt;
+                    &lt;td&gt;结余&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;丈夫&lt;/td&gt;
+                    &lt;td&gt;1000&lt;/td&gt;
+                    &lt;td&gt;500&lt;/td&gt;
+                    &lt;td&gt;500&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;妻子&lt;/td&gt;
+                    &lt;td&gt;500&lt;/td&gt;
+                    &lt;td&gt;800&lt;/td&gt;
+                    &lt;td&gt;-300&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+            &lt;tfoot&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;总计&lt;/td&gt;
+                    &lt;td&gt;1500&lt;/td&gt;
+                    &lt;td&gt;1300&lt;/td&gt;
+                    &lt;td&gt;200&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tfoot&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+
+                <p>运行结果如下图所示。</p>
+                <img src="./img/2.3.10-3.jpg" alt="">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>为了调整整列的格式，有时会用到&lt;colgroup&gt;和&lt;col&gt;.其中，&lt;colgroup&gt;用于对表格中
+
+                        的列进行组合，以便对其进行格式化，它的子元素&lt;col&gt;用于为表格中一个或者多个列定义
+
+                        属性值。需要注意的是，这两个元素也需要放在&lt;table&gt;元素内部。</p>
+                </div>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+                <button type='button' class='btn btn-outline-primary' id='copy-button4' data-clipboard-target='.copyTarget4' name='copy'>Copy</button>
+                <code class='copyTarget4'>
+示例代码：
+&lt;!DOCTYPE HIML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;表格&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;table&gt;
+            &lt;tbody&gt;
+                &lt;colgroup&gt;
+                    &lt;col bgcolor="#f79d03"&gt;
+                    &lt;col bgcolor="#ffd4f5"&gt;
+                    &lt;col bgcolor="#e80063"&gt;
+                    &lt;col bgcolor="#24ff45"&gt;
+                &lt;/colgroup&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;排名&lt;/th&gt;
+                    &lt;th&gt;公司&lt;/th&gt;
+                    &lt;th&gt;营收（单位：百万美元）&lt;/th&gt;
+                    &lt;th&gt;利润（单位：百万美元）&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;1&lt;/td&gt;
+                    &lt;td&gt;公司A&lt;/td&gt;
+                    &lt;td&gt;323,139.0&lt;/td&gt;
+                    &lt;td&gt;15,284.0&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;2&lt;/td&gt;
+                    &lt;td&gt;公司B&lt;/td&gt;
+                    &lt;td&gt;234,456.0&lt;/td&gt;
+                    &lt;td&gt;12,567.0&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;3&lt;/td&gt;
+                    &lt;td&gt;公司c&lt;/td&gt;
+                    &lt;td&gt;203,222.0&lt;/td&gt;
+                    &lt;td&gt;11,666.0&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+                </pre>
+                <p>运行结果如下图所示。</p>
+                <p> <img src="./img/2.3.10-4.jpg" alt=""></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

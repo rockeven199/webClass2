@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p><span class="lead">2.3.7 HTML的图片元素</span></p>
+                <p>在HTML中，图像是由&lt;img&gt;元素定义的，&lt;img&gt;元素是空元素标签，
+                    也就是说，
+                    了更加严谨和可靠，在实际开发中，最好写成&lt;img/&gt;。</p>
+                <p>有很多情况，一张图片可能胜过千言万语，但是图片过多或者过大，
+                    也可能造成用
+                    的等待，其至造成用户不知所云。所以，在编写HTML文档时，图文并茂一定要合理。</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>&lt;img&gt;元素的基本结构如下：</p>
+                        <p>&lt;img src=图片的 urlalt=图像的替代文本＂/&gt;</p>
+                    </div>
+                </div>
+                <p>图片的URL指存储图像的位置，可以是相对路径，也可以是绝对路径。</p>
+                <p>图像的替代文本主要针对的是无图浏览器，或者纯文字型浏览器，
+
+                    图片会显示成图
+
+                    的替代文本。</p>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+                <button type='button' class='btn btn-outline-primary' id='copy-button1' data-clipboard-target='.copyTarget1' name='copy'>Copy</button>
+                <code class='copyTarget1'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//m3c//DD BTML 4.01//EN" "http://W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-eguiv="content-type" content="text/html" charset="utf-8"&gt;
+        &lt;title&gt;图片&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="Baidu Logo"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code>
+                </pre>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>运行结果如下图所示。</p>
+                    <img src="./img/2.3.7-1.jpg" alt="">
+                    <p>在IE上关闭“显示图片”选项，运行结果如下图所示。</p>
+                    <img src="./img/2.3.7-2.jpg" alt="">
+                    <p>&lt;img&gt;元素还有以下一些属性可以使用。
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>·height:设置图片的高度。</p>
+                                <p>·width:设置图片的宽度。</p>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button1' data-clipboard-target='.copyTarget2' name='copy'>Copy</button>
+            <code class='copyTarget2'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm14/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;图片&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="Baidu Logo" width="117" height="38"&gt;&lt;br /&gt;
+        &lt;img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="Baidu Logo" width="234" height="76"&gt;&lt;br /&gt;
+        &lt;img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="Baidu Logo" width="351" height="114"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>运行结果如下图所示。</p>
+                <img src="./img/2.3.7-3.jpg" alt="">
+                <p>&lt;img&gt;标签支持全局标准属性和全局事件属性。</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

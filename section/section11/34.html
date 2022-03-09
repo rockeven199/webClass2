@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <span class="lead">3.4：CSS的两个特性</span>
+                <p>CSS的第一个特性是“层叠”，也就是说，一个HTML文档可能会使用多种CSS样式
+                    单，细化到某元素来说，会层叠多层样式单，但生效的总会有一个顺序，即样式生效的优
+                    先级如下：
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>内联样式→内部样式→外部样式→浏览器默认效果</p>
+                        </div>
+                    </div>例如，body#content.data img:hover 选择器，＃content是一个id选择器加l00,.data是
+                    一个类选择器加l0,:hover是伪类选择器加l0,body和img是元素各加l,最终权重值为
+                    0l22.针对某元素，在不同的权重选择器中，权重值高的选择器才会生效；如果是相同的
+                    权重，后出现的选择器生效。
+
+                    <p>当某元素层叠到的样式单较多时，我们通常会对样式单进行权重排序，计算方式如下：
+                        从0开始，一个行内样式加1000,一个id加100,一个属性选择器/class或者伪类加10,
+                        一个元素名或者伪元素加1.
+                    </p>
+                    <p>例如，body#content.data img:hover 选择器，＃content是一个id选择器加100,.data是
+                        一个类选择器加10,:hover是伪类选择器加10,body和img是元素各加1,最终权重值为
+                        0122.针对某元素，在不同的权重选择器中，权重值高的选择器才会生效；如果是相同的
+                        权重，后出现的选择器生效。
+                    </p>
+                    <p>CSS的第二个特性是“继承”，继承指的是特定的CSS属性可以从父元素向下传递到
+                        子元素。
+                    </p>
+                </p>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button1' data-clipboard-target='.copyTarget1' name='copy'>Copy</button>
+            <code class='copyTarget1'>
+继承示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
+        &lt;title&gt;继承&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;span&gt;&lt;cite&gt;北京欢迎你&lt;/cite&gt;是北京奥运会宣传曲&lt;/span&gt;
+        &lt;br/&gt;
+        &lt;span style="font-size: 30px;"&gt;&lt;cite&gt;北京欢迎你&lt;/cite&gt;是北京奥运会宣传曲&lt;/span&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+            </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p><span class="lead">2.3.9 HTML的列表元素</span></p>
+                <p>通常人们会将相关信息用列表的形式放在一起，这样会使内容显得更加有条理性。HTML提供了3种列表模式。</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><span class="lead">2.3.9.1 无序列表</span></p>
+                            <p>无序列表的每一项前缀都显示为图形符号，用&lt;ul&gt;定义无序列表，用&lt;li&gt;定义列表项。
+
+                                &lt;ul&gt;的type属性定义图形符号的样式，属性值为disc（点）、square（方块）、circle（圆）、
+
+                                none（无）等，但由于实际使用并不美观，因此通常用CSS指定前缀样式。</p>
+                        </div>
+                        <div class='col-md-12'>
+                            <pre class='language-xml text-left'>
+                        <button type='button' class='btn btn-outline-primary' id='copy-button1' data-clipboard-target='.copyTarget1' name='copy'>Copy</button>
+                        <code class='copyTarget1'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;无序列表&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;ul type="circle"&gt;
+            &lt;li&gt;北京&lt;/ll&gt;
+            &lt;li&gt;上海&lt;/ll&gt;
+            &lt;li&gt;重庆&lt;/ll&gt;
+        &lt;/ul&gt;
+        &lt;ul type="square"&gt;
+            &lt;li&gt;北京&lt;/li&gt;
+            &lt;li&gt;上海&lt;/li&gt;
+            &lt;li&gt;重庆&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul type="disc"&gt;
+            &lt;li&gt;北京&lt;/li&gt;
+            &lt;li&gt;上海&lt;/li&gt;
+            &lt;li&gt;重庆&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul type="none"&gt;
+            &lt;li&gt;北京&lt;/li&gt;
+            &lt;li&gt;上海&lt;/li&gt;
+            &lt;li&gt;重庆&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>运行结果如下图所示。</p>
+                            <img src="./img/2.3.9.1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><span class="lead">2.3.9.2 有序列表</p>
+                            <p>有序列表的前缀通常为数字或者字母，用&lt;ob定义有序列表，用&lt;li&gt;定义列表项。同样，
+
+                                &lt;o1b&gt;的type属性定义图形符号的样式，属性值为1（数字）、A（大写字母）、I（大写罗马
+
+                                字）、a（小写字母）、i（小写罗马数字）等。&lt;ol&gt;还可以通过start属性定义序号的开始位置。</p>
+                        </div>
+                        <div class='col-md-12'>
+                            <pre class='language-xml text-left'>
+                        <button type='button' class='btn btn-outline-primary' id='copy-button2' data-clipboard-target='.copyTarget2' name='copy'>Copy</button>
+                        <code class='copyTarget2'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"/&gt;
+        &lt;title&gt;有序列表&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;ol type="A"&gt;
+            &lt;li&gt;老大王器&lt;/li&gt;
+            &lt;li&gt;老二王宇&lt;/li&gt;
+            &lt;li&gt;老三王轩&lt;/li&gt;
+            &lt;li&gt;老四王昂&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;ol type="I"&gt;
+            &lt;li&gt;老大王器&lt;/li&gt;
+            &lt;li&gt;老二王宇&lt;/li&gt;
+            &lt;li&gt;老三王轩&lt;/li&gt;
+            &lt;li&gt;老四王昂&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;ol type="1" start="2"&gt;
+            &lt;li&gt;老二王宇&lt;/li&gt;
+            &lt;li&gt;老三王轩&lt;/li&gt;
+            &lt;li&gt;老四主易&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>运行结果如下图所示。</p>
+                            <img src="./img/2.3.9.2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="lead">2.3.9.3 定义列表</p>
+                            <p>定义列表是一种特殊的列表，它的内容不仅仅是一列项目，而是项目及其注释的组合。
+
+                                定义列表用&lt;d&gt;标签定义，定义列表内部可以有多个列表项标题，每个列表项标题用&lt;d&gt;</p>
+                        </div>
+                    </div>
+                    <div class='col-md-12'>
+                        <pre class='language-xml text-left'>
+                    <button type='button' class='btn btn-outline-primary' id='copy-button3' data-clipboard-target='.copyTarget3' name='copy'>Copy</button>
+                    <code class='copyTarget3'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;定义列表&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;dl&gt;
+            &lt;dt&gt;电影&lt;/dt&gt;
+            &lt;dd&gt;国产电影&lt;/dd&gt;
+            &lt;dd&gt;日韩电影&lt;/dd&gt;
+            &lt;dd&gt;欧美电影&lt;/dd&gt;
+            &lt;dt&gt;电视剧&lt;/dt&gt;
+            &lt;dd&gt;国产电视剧&lt;/dd&gt;
+            &lt;dd&gt;日韩电视剧&lt;/dd&gt;
+            &lt;dd&gt;欧美电视剧&lt;/dd&gt;
+            &lt;dt&gt;综艺&lt;/dt&gt;
+            &lt;dd&gt;国产综艺&lt;/dd&gt;
+            &lt;dd&gt;日韩综艺&lt;/dd&gt;
+            &lt;dd&gt;欧美称艺&lt;/da&gt;
+        &lt;dl/&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </code>
+                    </pre>
+                        <p>运行结果如下图所示。</p>
+                        <img src="./img/2.3.9.3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

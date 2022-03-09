@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../js/lib/three.r119.min.js"></script>
+    <script type="text/javascript" src="../js/lib/vanta.birds.min.js"></script>
+    <title>Welcome</title>
+    <style type="text/css">
+        html,
+        body {
+            overflow-y: hidden;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        @font-face {
+            font-family: fontstyle;
+            src: url(../font/SourceHanSansCN-Regular.otf);
+        }
+
+        div {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        span {
+            font-family: fontstyle;
+            margin-bottom: 30px;
+            color: rgba(0, 0, 0, 0.85);
+        }
+
+        #two,
+        #three,
+        #four,
+        #five {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bg">
+        <span style="font-size:50px;" id="one">欢迎！！！</span>
+        <span id="two">点击下方的全屏按钮进入全屏模式</span>
+        <span id="three">再次点击按钮返回窗口模式</span>
+        <span id="four">点击左侧边栏切换页面</span>
+        <span id="five">点击左右箭头翻页（全屏模式下）</span>
+    </div>
+</body>
+
+</html>

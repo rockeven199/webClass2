@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p><span class="lead">2.3.6 HTML的格式化元素</span></p>
+                <p>·普通文本。</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>&lt;b&gt;:定义粗体文本。</p>
+                        <p>&lt;big&gt;:定义大号字。</p>
+                        <p>&lt;em&gt;:定义着重文字。</p>
+                        <p>&lt;i&gt;:定义斜体字。</p>
+                        <p>&lt;small&gt;:定义小号字。</p>
+                        <p>&lt;strong&gt;:定义加重语气。</p>
+                        <p>&lt;sub&gt;:定义下标字。</p>
+                        <p>&lt;sup&gt;:定义上标字。</p>
+                        <p>&lt;ins&gt;:定义插入字。</p>
+                        <p>&lt;del&gt;:定义删除字。</p>
+                    </div>
+                </div>
+                ·计算机输出。
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>&lt;code&gt;:定义计算机代码。</p>
+                        <p>&lt;kbd&gt;:定义键盘输出样式。</p>
+                        <p>&lt;samp&gt;:定义计算机代码样本。</p>
+                        <p>&lt;t&gt;:定义打字机输入样式。</p>
+                        <p>&lt;var&gt;:定义变量。</p>
+                        <p>&lt;pre&gt;:定义预格式文本。与&lt;p&gt;标签不同的是，&lt;pre&gt;标签被包围在pre元素中的</p>
+                        <p>文本通常会保留空格和换行符。</p>
+                    </div>
+                </div>
+                ·引用、术语。
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>&lt;abbr&gt;:定义缩写。使用title属性，这样就能够在鼠标指针移动到该元素上时显示缩写的完整版本。</p>
+                        <p>&lt;acronym&gt;:定义首字母缩写，在某种程度上与&lt;abbr&gt;相同，也是使用title属性，这样就能够在鼠标指针移动到该元素上时显示缩写的完整版本。</p>
+                        <p>&lt;address&gt;:定义地址。</p>
+                        <p>&lt;bdo&gt;:定义文字方向。使用dir属性，用于表示文字方向，属性值为ltr或者tl。</p>
+                        <p>&lt;blockquote&gt;:定义长的引用，浏览器通常会从周围内容中分离出来，前后加上一定宽度的缩进。</p>
+                        <p>&lt;q&gt;:定义短的引用语，浏览器通常用双引号将&lt;q&gt;元素的内容括起来。</p>
+                        <p>&lt;cite&gt;:定义引用、引证，通常用于著作等。</p>
+                        <p>&lt;dfn&gt;:定义一个概念、项目、缩写、定义等。</p>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-12'>
+                <pre class='language-xml text-left'>
+            <button type='button' class='btn btn-outline-primary' id='copy-button1' data-clipboard-target='.copyTarget1' name='copy'>Copy</button>
+            <code class='copyTarget1'>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm14/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+&lt;title&gt;格式化&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;普通文本格式化&lt;/h1&gt;
+    粗体文本：&lt;b&gt;网页&lt;/b&gt; 是什么？&lt;br /&gt;
+    大号字：&lt;big&gt;网页&lt;/big&gt;是什么？&lt;br/&gt;
+    着重文字：&lt;em&gt;网页&lt;/em&gt;是什么？&lt;br /&gt;
+    斜体字：&lt;i&gt;网页&lt;/i&gt; 是什么？&lt;br /&gt;
+    小号字：&lt;small&gt;网页&lt;/smal1&gt; 是什么？&lt;br/&gt;
+    加重语气：&lt;strong&gt;网页&lt;/strong&gt;是什么？&lt;br/&gt;
+    下标字：&lt;sub网页&lt;/sub&gt;是什么？&lt;br/&gt;
+    上标字：&lt;sup&gt;网页&lt;/sup&gt;是什么？&lt;br/&gt;
+    插入字：&lt;ins&gt;网页&lt;/ins&gt;是什么？&lt;br/&gt;
+    删除字：&lt;del&gt;网页&lt;/del&gt;是什么？&lt;br/&gt;
+    &lt;h1&gt;计算机输出格式化&lt;/h1&gt;
+    普通文本：&lt;p&gt;
+    public class HTMLUtils {
+    ＆nbsp;&nbsp;private static final VERSION=5.0;
+    }
+    &lt;d/&gt;
+    计算机代码文本：&lt;br/&gt;
+    &lt;code&gt;
+    public class HTMLUtils {
+    ＆nbsp;&nbsp;private static final VERSION =5.0;
+    }
+    &lt;/code&gt; &lt;br /&gt;
+    键盘文本：&lt;br/&gt;
+    &lt;kbd&gt;
+    public class HTMLUtils {
+    ＆nbsp;&nbsp;private static final VERSION=5.0;
+    }
+    &lt;/kbd&gt; &lt;br /&gt;
+    计算机代码样本：&lt;br/&gt;
+    &lt;samp&gt;
+    public class HTMLUtils {
+    ＆nbsp;&nbsp;private static final VERSION=5.0;
+    }
+    &lt;/samp&gt;&lt;br/&gt;
+    打字机样式文本：&lt;br/&gt;
+    &lt;tt&gt;
+    public class HTMLUtils {
+    ＆nbsp;&nbsp;private static final VERSION =5.0;
+    }
+    &lt;/tt&gt; &lt;br/&gt;
+    变量：&lt;var&gt;int x= 10;&lt;/var&gt;&lt;br /&gt;
+    预格式文本：
+    &lt;pre&gt;
+    燕雀        安知
+
+    鸿鹄之 志
+
+    哉
+
+    &lt;/pre&gt;&lt;br&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+            </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p>运行结果如下图所示：</p>
+                <img src="./img/2.3.6-1.jpg" alt="">
+            </div>
+            <div class='col-md-12 mt-3 mb-3'>
+                <div class="col-md-12">
+                    <p>示例代码：</p>
+                </div>
+                <pre class='language-xml text-left'>
+                <button type='button' class='btn btn-outline-primary' id='copy-button1' data-clipboard-target='.copyTarget2' name='copy'>Copy</button>
+                <code class='copyTarget2'>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD RTML 4.01//EN" "http://www.w3.org/TR/htm14/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html";charset="utf-8"&gt;
+    &lt;title&gt;格式化&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;引用、术语格式化&lt;/h1&gt;
+    缩写：&lt;abbr title="abbreviation"&gt;abbr&lt;/abbr&gt;&lt;br /&gt;
+    首字母缩写：&lt;acronym title="HyperText Markup Language"&gt;HTML&lt;/acronym&gt;
+    /&gt;
+    I&gt;
+    地址：&lt;address&gt;北京市东城区王府井大街10号&lt;/address&gt;&lt;br/&gt;
+    文字方向从左往右：&lt;bdo dir=1tr&gt;北京欢迎你，Welcome to Beijing!&lt;/bdo&gt;&lt;br/&gt;
+    文字方向从右往左：&lt;bdo dir=rt1&gt;北京欢迎你，Welcome to Beijing!&lt;/bdo&gt;&lt;br /&gt;
+    长引用：&lt;blockquote&gt;To be or not to be,that's a question!&lt;/blockquote&gt;
+    &lt;br/&gt;
+    短引用：&lt;q&gt;莎士比亚&lt;/q&gt;一个人，诠释了整个世纪。&lt;br /&gt;
+    引用：&lt;cite&gt;北京欢迎你&lt;/cite&gt;是北京奥运会宣传曲&lt;br /&gt;
+    定义：&lt;dfn&gt;HTML&lt;/dfn&gt;是一种标记语言。&lt;br/&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+                </pre>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p> 运行结果如下图所示。</p>
+                <p><img src="./img/2.3.6-2.jpg" alt=""></p>
+                <p>所有的格式化标签都支持全局标准属性和全局事件属性。</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

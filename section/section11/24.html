@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-4.6.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../model/highlight/styles/atom-one-light.min.css" />
+    <link rel="stylesheet" href="../../css/article.css" />
+    <link rel="stylesheet" href="../../css/animate.css" />
+    <script type="text/javascript" src="../../js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../../model/highlight/highlight.js"></script>
+    <script type="text/javascript" src="../../model/js/code.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/xml.min.js"></script>
+    <script type="text/javascript" src="../../model/highlight/languages/css.min.js"></script>
+    <script type="text/javascript" src="../../model/js/clipboard.min.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <svg t="1642696614079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="2129" width="200" height="200">
+            <path
+                d="M85.333333 512C85.333333 276.352 276.309333 85.333333 512 85.333333c235.648 0 426.666667 190.976 426.666667 426.666667 0 235.648-190.976 426.666667-426.666667 426.666667-235.648 0-426.666667-190.976-426.666667-426.666667z m426.666667-30.165333l-105.685333-105.706667a21.269333 21.269333 0 0 0-30.08 0.106667 21.205333 21.205333 0 0 0-0.106667 30.08L481.834667 512l-105.706667 105.685333a21.269333 21.269333 0 0 0 0.106667 30.08 21.205333 21.205333 0 0 0 30.08 0.106667L512 542.165333l105.685333 105.706667a21.269333 21.269333 0 0 0 30.08-0.106667 21.205333 21.205333 0 0 0 0.106667-30.08L542.165333 512l105.706667-105.685333a21.269333 21.269333 0 0 0-0.106667-30.08 21.205333 21.205333 0 0 0-30.08-0.106667L512 481.834667z"
+                p-id="2130"></path>
+        </svg>
+        <img src="" alt="" id="maskimg">
+    </div>
+    <div id="CopySuccessInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-success text-center" id="success">Success!</div>
+        </div>
+    </div>
+    <div id="CopyErrorInfo">
+        <div class="col-md-2 offset-5">
+            <div class="text-danger text-center" id="error">Error!</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p><span class="lead">2.3.8 HTML的超链接元素</span></p>
+                <p>超链接在本质上属于一个网页的一部分，它是一种允许我们同其他网页或者站点之向
+
+                    进行链接的元素。各个网页链接在一起后，才能真正构成一个网站。超链接可以是一个字、一个词或者一组词，也可以是一幅图像。将鼠标指针移动到网页中的某个超链接上时，
+
+                    标箭头会变为一只小手。可以说，超链接是Web页面和其他媒体的重要区别之一。</p>
+                <p>在HTML中，创建超链接需要用到&lt;a&gt;、&lt;map&gt;、&lt;area&gt;3种标签，这3种标签均支持全局标准属性和全局事件属性。</p>
+                <p>一个超链接会产生网页跳转动作，这里就会产生一个问题－在哪里打开目标页面。这就需要&lt;a&gt;标签的target属性进行规定，它的默认值为＿self,其他的值还有＿blank、parent、＿top等，如下表所示。
+                </p>
+                <table class='table table-bordered table-striped table-hover'>
+                    <tr class='table-primary'>
+                        <th>值</th>
+                        <th>含义</th>
+                    </tr>
+                    <tr>
+                        <td>_self</td>
+                        <td>在超链接所在框架或者窗口中打开目标页面</td>
+                    </tr>
+                    <tr>
+                        <td>_blank</td>
+                        <td>在新浏览器窗口中打开目标页面</td>
+                    </tr>
+                    <tr>
+                        <td>_parent</td>
+                        <td>将目标页面载入含有该链接框架的父框架集或者父窗口中</td>
+                    </tr>
+                    <tr>
+                        <td>_top</td>
+                        <td>在当前的整个浏览器窗口中打开目标页面，因此会删除所有框架</td>
+                    </tr>
+                </table>
+                <p>常见的超链接大致可以分为以下7种类型。</p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><span class="lead">2.3.8.1 文本链接</span></p>
+                            <p>文本链接，指的是&lt;a&gt;和&lt;/a&gt;标签之间的元素内容为文本内容，是最常见的链接形式。
+
+                                链接目标可以是站内目标，也可以是站外目标；站内目标可以用相对路径，也可以用绝对
+
+                                路径，站外目标则必须用绝对路径。</p>
+                        </div>
+                        <div class='col-md-12'>
+                            <pre class='language-xml text-left'>
+                        <button type='button' class='btn btn-outline-primary' id='copy-button1' data-clipboard-target='.copyTarget1' name='copy'>Copy</button>
+                        <code class='copyTarget1'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv="content-type" content="text/html";charset="utf-8"&gt;
+    &lt;title&gt;超链接－文本链接&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;a href="http://www.baidu.com"&gt;百度&lt;/a&gt;&lt;br /&gt;
+    &lt;a href="index.html"&gt;本站首页&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>运行结果如下图所示。</p>
+                            <img src="./img/2.3.8.1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><span class="lead">2.3.8.2 锚点链接</span></p>
+                            <p>一份大型文档可以分成多个小节，读者可以通过锚点链接快速定位到自己想看的部分。
+
+                                锚点通常用唯一属性值id设定，然后在&lt;a&gt;元素的name属性中用“＃＋对应的锚点”即可。</p>
+                        </div>
+                        <div class='col-md-12'>
+                            <pre class='language-xml text-left'>
+                        <button type='button' class='btn btn-outline-primary' id='copy-button2' data-clipboard-target='.copyTarget2' name='copy'>Copy</button>
+                        <code class='copyTarget2'>
+                            &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;超链接－锚点链接&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1 id="main"&gt;首页&lt;/h1&gt;
+        &lt;a href="#html_base"&gt;跳转到HTML 基础&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#css_base"&gt;跳转到CSS基础&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#javascript_base"&gt;跳转到 JavaScript 基础&lt;/a&gt;&lt;br/&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;&lt;br /&gt;&lt;br /&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br/&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br/&gt;&lt;br/&gt;
+        &lt;h1 id="html_base"&gt;HTML 基础&lt;/h1&gt;
+        &lt;a href="#main"&gt;回到顶部&lt;/a&gt;&lt;br /&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+        &lt;h1 id="css_base"&gt;CSS 基础&lt;/h1&gt;
+            &lt;a href="#main"&gt;回到顶部&lt;/a&gt;&lt;br /&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;&lt;br /&gt;&lt;br /&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br/&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br/&gt;&lt;br/&gt;
+    &lt;h1 id="javascript_base"&gt;JavaScript基础&lt;/h1&gt;
+        &lt;a href="#main"&gt;回到顶部&lt;/a&gt;&lt;br/&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br/&gt;&lt;br /&gt;&lt;br /&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br/&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+            &lt;br /&gt;&lt;br /&gt;&lt;br/&gt;&lt;br/&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                        </pre>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>运行结果如下图所示。</p>
+                            <img src="./img/2.3.8.2-1.jpg" alt="">
+                            <p>单击跳转，可以跳转到相应的标题，如单击“跳转到CSS基础”，浏览器显示的页面。
+                                下图所示。</p>
+                            <img src="./img/2.3.8.2-2.jpg" alt="">
+                            <p>单击“回到顶部”即可回到首页标题处。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><span class="lead">2.3.8.3 图像链接</span></p>
+                            <p>图像链接就是&lt;a&gt;和&lt;/a&gt;标签之间的元素内容为&lt;img&gt;元素。</p>
+                        </div>
+                        <div class='col-md-12'>
+                            <pre class='language-xml text-left'>
+                        <button type='button' class='btn btn-outline-primary' id='copy-button3' data-clipboard-target='.copyTarget3' name='copy'>Copy</button>
+                        <code class='copyTarget3'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;超链接－图像链接&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href="http://www.baidu.com"&gt;
+        &lt;img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" a1t="Baidu Logo"&gt;&lt;br/&gt;
+        &lt;/a&gt;
+    &lt;/body&gt;
+ &lt;/html&gt;
+                        </code>
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>运结果如下图所示。</p>
+                            <img src="./img/2.3.8.3-1.jpg" alt="">
+                            <p>在图片上单击可以跳转至http://www/baidu.com/,在图片上右击，可复制链接地址。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><span class="lead">2.3.8.4 图像热区链接</span></p>
+                            <p>图像热区链接是图像链接的升级，指的是在同一张图片上，不同的地方可以链接到不
+
+                                同的目标位置。这时使用的不再是&lt;a&gt;元素，而是&lt;area&gt;元素，&lt;area&gt;元素属性比&lt;a&gt;元素多
+
+                                了shape、cords两个属性，如下表所示。</p>
+                            <table class='table table-bordered table-striped table-hover'>
+                                <tr class='table-primary'>
+                                    <th>shape属性</th>
+                                    <th>解释</th>
+                                    <th>cords 属性</th>
+                                    <th>解释</th>
+                                </tr>
+                                <tr>
+                                    <td>circle</td>
+                                    <td>圆形</td>
+                                    <td>x,y,r</td>
+                                    <td>（x,y）为圆心坐标，r为半径</td>
+                                </tr>
+                                <tr>
+                                    <td>rect</td>
+                                    <td>矩形</td>
+                                    <td>x1,yl;x2,y2</td>
+                                    <td>（x1,y1）为左上角坐标<br>（x2,y2）为右下角坐标</td>
+                                </tr>
+                                <tr>
+                                    <td>poly</td>
+                                    <td>多边形</td>
+                                    <td>x1,y1;x2,y2;x3,y3;x4,y4;</td>
+                                    <td>（x1,y1）,（x2,y2）,（x3,y3）,（x4,y4）,···,分别是多边形各个点的坐标</td>
+                                </tr>
+                            </table>
+                            <p>值得注意的是，&lt;area&gt;的坐标系，原点为图片的左上角，x轴的正方向朝右，y轴的正
+
+                                方向朝下，下图直观地反映了&lt;area&gt;的坐标系。</p>
+                            <img src="./img/2.3.8.4-1.jpg" alt="">
+                            <p>图像热区链接的使用步骤如下。</p>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p>（1）通过&lt;map&gt;标签定义一个image-map,可以包含一个以上的热区&lt;arca&gt;,每个
+
+                                        都有独立的链接。另外，要为&lt;map&gt;标签赋予 name属性。</p>
+                                    <p>（2）将&lt;img&gt;标签的usemap 属性与&lt;map&gt;标签的name属性相关联。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='col-md-12'>
+                            <pre class='language-xml text-left'>
+                            <button type='button' class='btn btn-outline-primary' id='copy-button5' data-clipboard-target='.copyTarget4' name='copy'>Copy</button>
+                            <code class='copyTarget4'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html" charset="utf-8"&gt;
+        &lt;title&gt;超链接－图片热区链接&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;map name="image_link"&gt;
+            &lt;area shape="circle" coords="50,50,30" href="" alt="" /&gt;
+            &lt;area shape="rect" coords="90,20,150,80" href="" alt=""/&gt;
+            &lt;area shape="poly" coords="200,30,300,10,280,70,260,100,220,50" href="" alt="" /&gt;
+        &lt;/map&gt;
+        &lt;img usemap="#image_link" src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="Baidu Logo" width="351" height="114"&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                            </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><span class="lead">2.3.8.5 E-mail 链接</span></p>
+                            <p>点击 E-mail 链接后，浏览器会使用系统默认的 E-mail 程序，打开一封新的电子邮件，
+
+                                且该电子邮件地址为链接指向的地址。href属性值由“mailto:”和E-mail 地址两部分组成。</p>
+                        </div>
+                        <div class='col-md-12'>
+                            <pre class='language-xml text-left'>
+                        <button type='button' class='btn btn-outline-primary' id='copy-button5' data-clipboard-target='.copyTarget5' name='copy'>Copy</button>
+                        <code class='copyTarget5'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"&gt;
+        &lt;title&gt;超链接－E-mail链接&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href="mailto:someone@example.com"&gt;联系我们&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>运行结果如下图所示。</p>
+                            <img src="./img/2.3.8.5-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><span class="lead">2.3.8.6 JavaScript 链接</span></p>
+                            <p>当用户点击Javascript链接时会进行JavaScript的调用，具体可以参考JavaScript篇章</p>
+                        </div>
+                        <div class='col-md-12'>
+                            <pre class='language-xml text-left'>
+                        <button type='button' class='btn btn-outline-primary' id='copy-button6' data-clipboard-target='.copyTarget6' name='copy'>Copy</button>
+                        <code class='copyTarget6'>
+                            示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;超链接－JavaScript 链接&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href="javascript:alert('He1lo Horid!')";&gt;点击弹窗&lt;/a&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                        </pre>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>运行结果如下图所示。</p>
+                            <img src="./img/2.3.8.6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><span class="lead">2.3.8.7 空链接</span></p>
+                            <p>空链接是指未指派目标地址的超链接，现在使用场景已经很少，通常将 href属性值量
+
+                                为javascript:void(0).在实际开发中，有的人会将空链接写成 href=“”或者 href=”#”，虽然
+
+                                两种也是空链接，但它其实有锚点（＃top）的意思，会产生回到顶部的效果。</p>
+                        </div>
+                        <div class='col-md-12'>
+                            <pre class='language-xml text-left'>
+                        <button type='button' class='btn btn-outline-primary' id='copy-button7' data-clipboard-target='.copyTarget7' name='copy'>Copy</button>
+                        <code class='copyTarget7'>
+示例代码：
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv="content-type" content="text/html"; charset="utf-8"/&gt;
+        &lt;title&gt;超链接－空链接&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;a href=""&gt;这是一个空链接&lt;/a&gt;&lt;br /&gt;
+        &lt;a href="#"&gt;这是一个空链接&lt;/a&gt;&lt;br/&gt;
+        &lt;a href="javascript:void(0)"&gt;这是一个空链接&lt;/a&gt;&lt;br/&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                        </code>
+                        </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
